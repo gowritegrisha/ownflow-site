@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — Your voice stays on your Mac. Meeting notes, without a bot.</title>
+  <meta name="description" content="Your voice stays on your Mac. Meeting notes, without a bot.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="mark" href="index.html">Ownflow</a>
+    <nav class="nav-bar" aria-label="Pages">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="download.html">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M2 4.5h14M2 9h14M2 13.5h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </summary>
+      <nav aria-label="Menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html" aria-current="page">Support</a></li>
+        </ul>
+      </nav>
+    </details>
+  </header>
+  <main id="content">
+    <h1>Support</h1>
+    <p>For a problem, use the subject Ownflow support. Include the version from About, what you expected, and what happened.</p>
+    <p>Don't send a recording, a transcript, a note, a dictation, a screenshot of a conversation, a dictionary, or a password.</p>
+    <p class="support-act"><a class="btn" href="mailto:?subject=Ownflow%20support" data-subject="Ownflow support">Email support</a> <span data-address></span></p>
+    <p>In the app, About → Support → Report a problem opens a draft in your mail app. The draft holds the app version, the source SHA, and the macOS version. You write what happened and send it yourself. Ownflow doesn't send it.</p>
+    <p>What the app stores is in the <a href="privacy.html">privacy notice</a>.</p>
+
+    <h2 id="faq">Questions</h2>
+
+    <h3 id="install">How do I install it?</h3>
+    <p>Get the disk image from the <a href="download.html">download page</a>. It needs a Mac with Apple silicon and macOS 14.4 or later. Open it, drag Ownflow onto Applications, eject the disk image, and open Ownflow from Applications. You never need Terminal, and dictation needs no account.</p>
+
+    <h3 id="permissions">Which permissions does it ask for?</h3>
+    <p>Microphone, to turn speech into text. Accessibility, so dictation can type into the app you're using. For meeting notes, recording the sound your Mac plays, so the notes include the other people. Screen capture only if you ask about what's on your screen. If you missed a prompt, open System Settings → Privacy &amp; Security and turn Ownflow on in the pane named Microphone, Accessibility, or Screen &amp; System Audio Recording (Screen Recording on macOS 14).</p>
+
+    <h3 id="not-invited">Ownflow says I'm not invited.</h3>
+    <p>Meetings and cloud features are invite-only for now. Dictation works without an account. To ask for an invitation, use the button on the <a href="download.html">download page</a>. Sign-in admits the Google accounts Grisha invited. Sign out and sign in with the Google account the invitation went to. If that is the account you used, tell Grisha which email you signed in with.</p>
+
+    <h3 id="updates">How do I get updates?</h3>
+    <p>About → Updates checks for a newer version each time you open it. Ownflow waits until dictation and any meeting have stopped, then asks before it restarts. You can also install a newer disk image from the download page the same way and choose Replace. Your sign-in, notes, and speech model stay.</p>
+
+    <h3 id="uninstall">How do I uninstall it?</h3>
+    <p>Quit Ownflow from its menu-bar icon and drag it from Applications to the Trash. Notes, recordings, and the speech model stay in your home folder under Library → Application Support → ai.ownflow.app. Drag that folder to the Trash only when you want them gone. To delete your account as well, use Settings in the app before you remove it. That also removes the sign-in session from the Mac keychain. Sign out alone keeps that session in the keychain, under ai.ownflow.app.session, so the same account can sign back in. To remove it without deleting the account, delete the ai.ownflow.app.session items in Keychain Access.</p>
+
+    <h3 id="privacy">What happens to my data?</h3>
+    <p>Dictation is recognised on your Mac. Without an account, the app only downloads its speech model and checks for updates. Meeting audio isn't stored on the server. Transcripts and notes are stored with your account. Transcript text is deleted after 90 days, or sooner if you delete the meeting. You can export or delete your account in the app. The details are in the <a href="privacy.html">privacy notice</a>.</p>
+  </main>
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="legal.html">Legal</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="contact.js"></script>
+</body>
+</html>

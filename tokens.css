@@ -1,0 +1,60 @@
+/* Direction A canvas. The website accent is warm amber, not the Mac system blue.
+   #d4923a on #262320 is 5.9:1. #262320 on #d4923a is the same 5.9:1.
+   The app keeps #0071e3 for native controls. Red is only the recording dot. */
+
+:root {
+  --color-paper: #262320;
+  --color-ink: #f3eee6;
+  --color-ink-soft: #a89888;
+  --color-accent: #d4923a;
+  --color-on-accent: #262320;
+  --color-rule: #3a342e;
+  --color-focus: #f3eee6;
+  --color-sidebar: #2e2a26;
+  --color-recording: #ff453a;
+  --color-spoken: #a8a7a6;
+  --color-selection: rgba(0, 113, 227, 0.16);
+  --color-tint: rgba(243, 228, 208, 0.04);
+
+  --font-display: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --text-display: 3rem;
+  --text-title: 2rem;
+  --text-section: 1.5rem;
+  --text-body: 1.0625rem;
+  --text-small: 0.875rem;
+  --leading-display: 1.05;
+  --leading-title: 1.15;
+  --leading-body: 1.55;
+
+  --page: 1120px;
+  --column: 720px;
+  --gutter: 1.5rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.75rem;
+  --space-section: 2.5rem;
+  --under-h1: 12px;
+  --under-h2: 24px;
+
+  --control: 2.75rem;
+  --radius-control: 6px;
+  --focus-width: 2px;
+  --focus-offset: 3px;
+  --label-col: 9rem;
+}
+
+:root[data-appearance="light"] {
+  --color-paper: #fbfbfb;
+  --color-ink: #0f0f0f;
+  --color-ink-soft: #5e5e5e;
+  --color-rule: #e4e4e4;
+  --color-focus: #0f0f0f;
+  --color-sidebar: #f3f1ee;
+  --color-recording: #ff3b30;
+  --color-spoken: #3a4658;
+  --color-tint: rgba(62, 48, 32, 0.04);
+}

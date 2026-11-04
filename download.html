@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download — Your voice stays on your Mac. Meeting notes, without a bot.</title>
+  <meta name="description" content="Download Ownflow for Mac. Free dictation with no account. Apple silicon, macOS 14.4+.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body class="page-download">
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="mark" href="index.html">Ownflow</a>
+    <nav class="nav-bar" aria-label="Pages">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="download.html" aria-current="page">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M2 4.5h14M2 9h14M2 13.5h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </summary>
+      <nav aria-label="Menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </details>
+  </header>
+  <main id="content">
+    <h1>Download Ownflow</h1>
+    <p>Dictation on your Mac is free. It needs no account and no sign-in.</p>
+    <p class="download-act"><a class="btn btn-download" href="https://github.com/gowritegrisha/ownflow-releases/releases/latest/download/Ownflow-arm64.dmg"><span>Download for Mac</span><small>Apple silicon, macOS 14.4+</small></a></p>
+    <p>Open the disk image, drag Ownflow to Applications, and open it from there. The first run walks you through the microphone, Accessibility and the speech model download.</p>
+    <p>What changed in each version is in the <a href="https://github.com/gowritegrisha/ownflow-releases/releases/latest">release notes</a>. Open About → Updates to get a newer version.</p>
+
+    <h2>Meetings and the cloud</h2>
+    <p>Meetings and cloud features are invite-only for now. That covers meeting notes, cleanup, rewrite, in-call help and screen questions.</p>
+    <p>It's for personal calls. You tell the other people. The app doesn't.</p>
+    <p class="support-act" data-invite-fallback><a class="btn" href="mailto:?subject=Ownflow%20invite" data-subject="Ownflow invite">Request an invitation</a> <span data-address></span></p>
+    <form class="invite-form" data-invite-endpoint="" hidden novalidate>
+      <label for="invite-email">Your email address</label>
+      <div class="invite-row">
+        <input id="invite-email" name="email" type="email" autocomplete="email" maxlength="254" required spellcheck="false" aria-describedby="invite-error invite-note">
+        <button class="btn" type="submit">Request an invitation</button>
+      </div>
+      <p id="invite-error" class="invite-error" data-invite-error role="alert" hidden></p>
+      <p id="invite-note" class="invite-note">Grisha reads each request and decides by hand. Ownflow sends no automatic email. <a href="privacy.html#purpose">How the address is kept</a></p>
+      <div class="sr-only" aria-hidden="true">
+        <label for="invite-website">Leave this empty</label>
+        <input id="invite-website" name="website" type="text" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true" data-bwignore>
+      </div>
+    </form>
+    <p class="invite-done" data-invite-done tabindex="-1" hidden>Thanks. Your request was sent. Grisha decides on each request by hand.</p>
+  </main>
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="legal.html">Legal</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="contact.js"></script>
+  <script src="invite.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy — Your voice stays on your Mac. Meeting notes, without a bot.</title>
+  <meta name="description" content="Your voice stays on your Mac. Meeting notes, without a bot.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="mark" href="index.html">Ownflow</a>
+    <nav class="nav-bar" aria-label="Pages">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="download.html">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M2 4.5h14M2 9h14M2 13.5h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </summary>
+      <nav aria-label="Menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </details>
+  </header>
+  <main id="content">
+    <h1>Privacy</h1>
+    <p>Version 2026-11-04.2. This notice covers two things. First, the free Ownflow app for Mac, which you use without an account. Second, invited accounts, which add sign-in, cleanup, rewrite, meeting notes and screen questions. The part on invited accounts is the tester notice.</p>
+
+    <nav class="toc" aria-label="On this page">
+      <ol>
+        <li><a href="#free-app">The free app, without an account</a></li>
+        <li><a href="#accounts">Invited accounts</a></li>
+        <li><a href="#responsible">Who is responsible</a></li>
+        <li><a href="#accept">What you are being asked to accept</a></li>
+        <li><a href="#purpose">What the app is for</a></li>
+        <li><a href="#where">Where the data sits</a></li>
+        <li><a href="#processors">Who else processes it</a></li>
+        <li><a href="#retention">How long Ownflow keeps it</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#limits">What this notice doesn't do</a></li>
+      </ol>
+    </nav>
+
+    <section id="free-app">
+      <h2>The free app, without an account</h2>
+      <p>Dictation is recognised on your Mac. Without an account, the app makes only two kinds of request, and nothing else. It also opens a mail draft, but only if you ask.</p>
+      <ul>
+        <li><strong>The speech model download.</strong> The first run downloads the speech model, and choosing another model downloads that one. The file comes from Ownflow's releases on GitHub. If GitHub fails, it comes from Ownflow's model storage at Supabase in Frankfurt. Like any download, the server sees your IP address and the file asked for.</li>
+        <li><strong>The update check.</strong> When it checks for updates, the app asks GitHub whether a newer version exists, and downloads it from GitHub if there is one. GitHub sees your IP address and the request.</li>
+        <li><strong>A mail draft, only if you open one.</strong> Report a problem opens a draft in your own mail app. The draft holds the app version, the source SHA and the macOS version, and what you write. The app doesn't send it. You do, if you choose to.</li>
+      </ul>
+      <p>The dictation audio, the dictation text, your history and your dictionary stay on the Mac. Without an account there is no sign-in, no cleanup, and no usage or diagnostic events. GitHub and Supabase are listed under <a href="#processors">who else processes it</a>.</p>
+      <p>This website is hosted on GitHub Pages. When you visit it, GitHub receives your IP address and the page asked for. The site sets no cookies and has no analytics. If you ask for an invite with the form on the download page, your email address goes to Ownflow's database at Supabase, with a salted hash of your IP address so repeated requests can be limited. <a href="#purpose">What the app is for</a> and <a href="#retention">how long Ownflow keeps it</a> say how they are used and when they go.</p>
+      <p>The controller is Grisha, as in <a href="#responsible">who is responsible</a>. The contact details are in the <a href="legal.html">aviso legal</a>. To ask about your data, or for help, use the <a href="support.html">support page</a>. The same <a href="#rights">rights</a> apply to you without an account.</p>
+    </section>
+
+    <h2 id="accounts">Invited accounts</h2>
+    <p>Meetings and cloud features are invite-only for now. The rest of this notice is the tester notice for invited accounts.</p>
+
+    <table class="summary">
+      <caption class="sr-only">Where each kind of data sits, and how long Ownflow keeps it.</caption>
+      <thead>
+        <tr>
+          <th scope="col">What</th>
+          <th scope="col">Where</th>
+          <th scope="col">How long</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><span class="cell-label">What</span><span class="cell-value">Dictation</span></th>
+          <td><span class="cell-label">Where</span><span class="cell-value">Recognition runs on your Mac.</span></td>
+          <td><span class="cell-label">How long</span><span class="cell-value">The database row has no dictation text.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">What</span><span class="cell-value">Meeting audio</span></th>
+          <td><span class="cell-label">Where</span><span class="cell-value">It stays on your Mac and is streamed to transcribe.</span></td>
+          <td><span class="cell-label">How long</span><span class="cell-value">A segment is deleted on the Mac after its transcript is saved. It is not stored as an audio file.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">What</span><span class="cell-value">Transcript</span></th>
+          <td><span class="cell-label">Where</span><span class="cell-value">It is stored with your account.</span></td>
+          <td><span class="cell-label">How long</span><span class="cell-value">The daily job deletes transcript text at 90 days, or sooner if you delete the meeting.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">What</span><span class="cell-value">Generated notes</span></th>
+          <td><span class="cell-label">Where</span><span class="cell-value">They are stored with your account.</span></td>
+          <td><span class="cell-label">How long</span><span class="cell-value">The daily job deletes them at 12 months.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">What</span><span class="cell-value">Typed notes and the title</span></th>
+          <td><span class="cell-label">Where</span><span class="cell-value">They are stored with your account.</span></td>
+          <td><span class="cell-label">How long</span><span class="cell-value">They stay until the meeting is deleted.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">What</span><span class="cell-value">Screen question</span></th>
+          <td><span class="cell-label">Where</span><span class="cell-value">The window and the question are sent for that ask.</span></td>
+          <td><span class="cell-label">How long</span><span class="cell-value">Ownflow does not keep the image or the question.</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="fold" id="responsible" open>
+      <summary>Who is responsible</summary>
+      <div class="fold-body">
+        <p>The controller is Grisha, personally, until a company takes over before any paid use. Ownflow is not a company yet. The address for notices is in the <a href="legal.html">aviso legal</a>. Grisha accepted the tester notice text, version 2026-11-02.1, on 2 Nov 2026.</p>
+        <p>To ask for access, correction, a copy, deletion, or help, use the <a href="support.html">support page</a>. The support address will be a mailbox on ownflow.ai. This notice doesn't name it. The app doesn't send email or chat messages on its own. Don't put a recording, a transcript, a screenshot, or a password in the message. Say what broke, and the app version if you have it.</p>
+      </div>
+    </details>
+
+    <details class="fold" id="accept" open>
+      <summary>What you are being asked to accept</summary>
+      <div class="fold-body">
+        <p>The controller accepted the tester notice text, version 2026-11-02.1, on 2 Nov 2026. You tell the other people on the call yourself. The app won't tell them.</p>
+      </div>
+    </details>
+
+    <details class="fold" id="purpose" open>
+      <summary>What the app is for</summary>
+      <div class="fold-body">
+        <ul>
+          <li>Sign you in with Google and keep your tester account.</li>
+          <li>Dictate on your Mac, including when the cloud is unavailable.</li>
+          <li>Send dictation text for cleanup, and selected text for rewrite, when you are online.</li>
+          <li>Record a call you start, transcribe it, and draft notes.</li>
+          <li>Answer a question about a window on your screen. That uses a vision model.</li>
+          <li>Count usage so the beta can stay on the current free plans.</li>
+          <li>Let you ask for help without attaching the contents of a dictation or a meeting.</li>
+          <li>You can ask for an invite by giving an email address on the Ownflow website. A tester can also suggest someone by email, up to three people. Ownflow stores the address, whether it came from the website or a tester, and when it was asked. Ownflow does not email that person. Grisha decides who is invited. A request is deleted when Grisha invites or declines it, or after 90 days, whichever comes first. The address is not used for anything else. A tester's suggestions are included in that tester's data export and are removed when that tester's account is deleted. The website form and the suggestion control stay off until Ownflow publishes this text and turns the feature on.</li>
+        </ul>
+        <p>The first tester group is expected to have every current feature, including meetings. Screen questions use Groq <code>qwen/qwen3.8-27b</code>. When you ask, the app sends a screenshot of the front window you chose, with your question. It does not send the whole display. Work calls are out. Use it for your own calls and calls with friends. You tell anyone else on the call that you are recording. The app shows you a recording indicator and lets you pause, stop and discard, or drop the other person's channel. It does not notify them.</p>
+      </div>
+    </details>
+
+    <details class="fold" id="where" open>
+      <summary>Where the data sits</summary>
+      <div class="fold-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">On your Mac</th>
+              <th scope="col">In the cloud</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Dictation audio and the dictation text</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">Yes. Recognition runs on the Mac.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">The text is sent for cleanup when you are online. The saved dictation row stores timing, length, language and the app that received the paste. It does not store the words.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Rewrite text</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">The selection is on the Mac.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">The text is sent to produce the rewrite. It is not a stored transcript.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Meeting audio</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">Yes. An encrypted spool. A segment is deleted on the Mac after its transcript is saved.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">Passed through for transcription. Not stored as an audio file.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Transcripts, notes, titles, dictionary</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">You can keep local history.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">Yes, in the project database, tied to your account.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Screen question</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">The screenshot is the front window, kept in memory for the request. The Mac code does not write it to disk.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">The image and the question are sent to Groq for that ask. The server holds them in memory for the request. It does not write them to disk, to Storage, or to the database, and it does not log them. A usage row stores token counts and the model id, not the image or the question.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Google sign-in</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">The session is kept in the Mac keychain.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">Google receives the sign-in (openid, email, profile). The beta project stores the account.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Usage and diagnostic events</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">Usage events are not stored on the Mac.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">Counts, timings and error events. Event details are numbers, not the contents of a meeting.</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="fold" id="processors" open>
+      <summary>Who else processes it</summary>
+      <div class="fold-body">
+        <p>Regions below are what the provider pages said on 1 Nov 2026, plus the region this project is configured to use. They aren't a claim that every vendor is inside the EU, and they aren't a claim that no vendor trains on data.</p>
+        <article class="proc">
+          <h3>Supabase Pte. Ltd.</h3>
+          <p><span class="k">Role</span> Database, sign-in storage, and the API. Also Ownflow's model storage, the second source of the speech models, used without an account too.</p>
+          <p><span class="k">Region</span> This project is in Frankfurt (<code>eu-central-1</code>). The Supabase DPA (version dated 1 June 2026) says data is stored and primarily processed in a region the customer directs, and that Supabase may still process it where a subprocessor or the law requires. The subprocessor list of 12 Oct 2026 names US hosting companies, including Amazon Web Services, Google and Cloudflare.</p>
+          <p><span class="k">Training and retention</span> The terms fetched 1 Nov 2026 say Supabase won't use customer data to train a model without prior written consent. The free plan has no daily hosted backup. Nightly dumps run on the operator's Mac. See the retention table.</p>
+        </article>
+        <article class="proc">
+          <h3>Deepgram</h3>
+          <p><span class="k">Role</span> Turns meeting audio into text. Ownflow calls <code>api.eu.deepgram.com</code> with <code>mip_opt_out=true</code>.</p>
+          <p><span class="k">Region</span> Deepgram's current data page says that EU host stays in the EU and doesn't fall back to another region. The specific EU country can change. Deepgram's privacy policy, last updated 26 Oct 2021, still says it stores data on servers in the US. Both sentences are on Deepgram's site. A short-lived token doesn't itself force the EU host or the opt-out; the app sets both.</p>
+          <p><span class="k">Training and retention</span> Deepgram's default is to keep audio and transcripts for model improvement. The opt-out flag is how Ownflow turns that off per request. Opted-out audio is described as kept only while the request is processed. Usage logs are still kept, and Deepgram says those logs are retrievable for 90 days. Deepgram's subprocessor page lists audio processors including Amazon Web Services, Oracle, Cloudflare, OpenAI and Anthropic.</p>
+        </article>
+        <article class="proc">
+          <h3>Groq</h3>
+          <p><span class="k">Role</span> Cleanup, rewrite, meeting notes, and screen questions. A screen question sends the screenshot and the question. The vision model is <code>qwen/qwen3.8-27b</code>. Cleanup, rewrite and notes tests use <code>openai/gpt-oss-20b</code>. That name isn't evidence that OpenAI sees the text.</p>
+          <p><span class="k">Region</span> Groq's data page says retained customer data is in Google Cloud buckets in the United States. The DPA allows processing in the US and other countries, with standard contractual clauses as the stated transfer tool.</p>
+          <p><span class="k">Training and retention</span> The services agreement, last modified 22 June 2026, says Groq may not train or fine-tune on inputs or outputs unless the customer allows it. When zero data retention is on, it stops Groq from logging inputs and outputs for reliability and abuse checks.</p>
+        </article>
+        <article class="proc">
+          <h3>Google</h3>
+          <p><span class="k">Role</span> Sign-in only, for this beta. Scopes are openid, email and profile. The Google app is in Testing, for at most 100 test users, on GCP project <code>ownflow-513418</code>.</p>
+          <p><span class="k">Region</span> Not pinned to Frankfurt by Ownflow.</p>
+          <p><span class="k">Training and retention</span> Not restated here. Google isn't the model provider.</p>
+        </article>
+        <article class="proc">
+          <h3>GitHub</h3>
+          <p><span class="k">Role</span> Hosts the app downloads, the update feed and the first copy of the speech models, in Ownflow's public <code>ownflow-releases</code> repository. Also used without an account.</p>
+          <p><span class="k">Region</span> Not pinned to Frankfurt by Ownflow.</p>
+          <p><span class="k">Training and retention</span> GitHub receives the download requests, with your IP address. It gets no dictation, account or meeting data from Ownflow.</p>
+        </article>
+        <p>The evidence, with the page addresses, is in the processor register that ships next to this file in the Ownflow source. Provider lists change. The provider pages were read on 1 Nov 2026. The 2 Nov changes are the vision model, zero data retention, the Mac backups, and account export and deletion.</p>
+      </div>
+    </details>
+
+    <details class="fold" id="retention" open>
+      <summary>How long Ownflow keeps it</summary>
+      <div class="fold-body">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Intended period</th>
+              <th scope="col">Today</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Transcript text</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">90 days, or sooner if you delete the meeting.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">The daily job deletes transcript text at 90 days.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Generated notes</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">12 months.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">The daily job deletes them at 12 months.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Typed notes and the meeting title</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">Until the meeting is deleted.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">The daily job leaves them.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Dictation text</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">On the Mac only.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">The database row has no dictation text.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Usage rows</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">12 months.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">The daily job does not delete them yet.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Content-free logs and app events</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">30 days.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">The daily job does not delete them yet. Event payloads are numbers.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Dictionary</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">Until you delete the term or the account.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">The daily job does not delete terms.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Screen image and question</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">Not kept.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">Sent to Groq for that ask. Not stored by Ownflow.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Invite requests and suggestions</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">90 days.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">A daily job deletes requests older than 90 days. A salted hash of the website visitor's IP address is kept so repeated requests can be limited. The hash is not the IP address itself. The active database drops it within about two hours. Decided addresses are deleted when Grisha decides.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Database backups</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">Seven days on the operator's Mac.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">Supabase does not take a daily backup of a free project. A launchd job on the operator's Mac runs at 03:15 local. It dumps the <code>public</code>, <code>private</code>, and <code>auth</code> schemas with <code>pg_dump</code>. The files sit in the operator's home folder (<code>ownflow-backups</code>). Files older than seven days are deleted. A dump is restored only into a local database, never into the live project. Before that restore is treated as usable, it runs <code>private.replay_account_deletions()</code>, so a deleted account is not brought back. If a deletion record still has an export file path, the restore is not treated as usable. Storage files are not inside a database dump.</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="fold" id="rights" open>
+      <summary>Your rights</summary>
+      <div class="fold-body">
+        <p>You can ask for access, correction, deletion, restriction, a copy, and to object. You can also complain to a supervisory authority. The practical path today:</p>
+        <ul>
+          <li>You can delete a meeting in the app. Stop-and-discard drops that recording.</li>
+          <li>Full account export and full account deletion are in the app, in Settings, on the connection screen. Export downloads your account. Deletion asks you to type <code>delete</code> and to sign in with Google again. A backup can still hold the database copy for up to seven days. A restore replays deletions, as the row above says. Other Macs are not wiped from the Mac where you delete.</li>
+          <li>You can still ask for help through the <a href="support.html">support page</a>. The operator can help.</li>
+          <li>Other people on a call are not users of Ownflow. They ask you, the person who recorded. You can pause, stop and discard, or delete their channel.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="fold" id="limits" open>
+      <summary>What this notice doesn't do</summary>
+      <div class="fold-body">
+        <ul>
+          <li>It doesn't authorise work calls.</li>
+          <li>It doesn't make the app announce a recording.</li>
+          <li>There isn't a hidden mode. The panel steps aside when the screen is captured. It isn't invisible.</li>
+          <li>It doesn't accept Supabase, Deepgram or Groq terms or DPAs on the controller's behalf.</li>
+          <li>It doesn't claim the service is EU-only.</li>
+          <li>It doesn't add an analytics product. Diagnostic detail is versions, error codes and timings, not contents.</li>
+        </ul>
+        <p>Source version 2026-11-04.2. The controller accepted the tester notice text, version 2026-11-02.1, on 2 Nov 2026. Provider pages were read on 1 Nov 2026.</p>
+        <p>This isn't a company privacy policy, and it isn't legal advice.</p>
+      </div>
+    </details>
+  </main>
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="legal.html">Legal</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script>
+    (function () {
+      var mq = window.matchMedia("(max-width: 46rem)");
+      var folds = document.querySelectorAll("details.fold");
+      function apply() {
+        var hash = location.hash.replace("#", "");
+        folds.forEach(function (fold) {
+          fold.open = !mq.matches || fold.id === hash;
+        });
+      }
+      apply();
+      mq.addEventListener("change", apply);
+      window.addEventListener("hashchange", apply);
+    })();
+  </script>
+</body>
+</html>
