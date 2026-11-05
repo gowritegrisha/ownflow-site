@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- The Eclipse favicon (bn-4): apps/desktop/icon-source/favicon.svg (ink #17181c) and
+     favicon-dark.svg (#f2f1ed) in one file, so one <link rel="icon"> follows the scheme. -->
+<style>path{fill:#17181c}@media (prefers-color-scheme:dark){path{fill:#f2f1ed}}</style>
+<path fill-rule="evenodd" d="M32 5a27 27 0 1 0 0 54a27 27 0 1 0 0 -54zM37.5 14.5a15 15 0 1 0 0 30a15 15 0 1 0 0 -30z"/>
+</svg>

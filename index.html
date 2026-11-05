@@ -3,16 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your voice stays on your Mac. Meeting notes, without a bot.</title>
-  <meta name="description" content="Your voice stays on your Mac. Meeting notes, without a bot.">
+  <title>Dictation stays on your Mac. Meeting notes, without a bot.</title>
+  <meta name="description" content="Dictation stays on your Mac. Meeting notes, without a bot.">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1f1f1d">
+  <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
   <header class="site-header">
-    <a class="mark" href="index.html">Ownflow</a>
+    <a class="mark" href="index.html">
+      <picture>
+        <source srcset="lockup-light.svg" media="(prefers-color-scheme: light)">
+        <img src="lockup-dark.svg" alt="Ownflow" width="147" height="22">
+      </picture>
+    </a>
     <nav class="nav-bar" aria-label="Pages">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
@@ -40,9 +48,9 @@
   </header>
   <main id="content">
     <div class="hero">
+      <h1><span class="line">Speak anywhere.</span> <span class="line">Remember every call.</span></h1>
       <div class="hero-copy">
-        <h1>Your voice stays<br>on your Mac.</h1>
-        <p class="claim">Meeting notes, without a bot.</p>
+        <p class="claim">Dictation stays on your Mac. Meeting notes, without a bot.</p>
         <p class="audience">If you use one app for dictation and another for meeting notes, Ownflow does both in one.</p>
         <p class="subhead">You tell the other people on the call. We don't keep the audio. Cloud transcription is the paid part.</p>
         <p class="beta-line">Apple silicon, macOS 14.4+ · free, no account</p>
@@ -80,7 +88,7 @@
               </div>
             </div>
           </div>
-          <div class="capsule"><span class="win-dot"></span>21:10</div>
+          <div class="capsule"><svg class="eclipse" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="disc" fill-rule="evenodd" d="M32 5a27 27 0 1 0 0 54a27 27 0 1 0 0 -54zM37.5 14.5a15 15 0 1 0 0 30a15 15 0 1 0 0 -30z"/><circle class="hole" cx="37.5" cy="29.5" r="15"/></svg>21:10</div>
         </div>
         <figcaption class="sr-only">Ownflow recording a client check-in. The note asks Maya for the revised timeline before Thursday. The recording pill shows 21:10.</figcaption>
       </figure>

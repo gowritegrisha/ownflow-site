@@ -3,16 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Download — Your voice stays on your Mac. Meeting notes, without a bot.</title>
-  <meta name="description" content="Download Ownflow for Mac. Free dictation with no account. Apple silicon, macOS 14.4+.">
+  <title>Download — Dictation stays on your Mac. Meeting notes, without a bot.</title>
+  <meta name="description" content="Dictation stays on your Mac. Meeting notes, without a bot.">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1f1f1d">
+  <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="site.css">
 </head>
 <body class="page-download">
   <a class="skip" href="#content">Skip to content</a>
   <header class="site-header">
-    <a class="mark" href="index.html">Ownflow</a>
+    <a class="mark" href="index.html">
+      <picture>
+        <source srcset="lockup-light.svg" media="(prefers-color-scheme: light)">
+        <img src="lockup-dark.svg" alt="Ownflow" width="147" height="22">
+      </picture>
+    </a>
     <nav class="nav-bar" aria-label="Pages">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -45,7 +53,7 @@
     <p>Open the disk image, drag Ownflow to Applications, and open it from there. The first run walks you through the microphone, Accessibility and the speech model download.</p>
     <p>What changed in each version is in the <a href="https://github.com/gowritegrisha/ownflow-releases/releases/latest">release notes</a>. Open About → Updates to get a newer version.</p>
 
-    <h2>Meetings and the cloud</h2>
+    <h2 id="invite">Meetings and the cloud</h2>
     <p>Meetings and cloud features are invite-only for now. That covers meeting notes, cleanup, rewrite, in-call help and screen questions.</p>
     <p>It's for personal calls. You tell the other people. The app doesn't.</p>
     <p class="support-act" data-invite-fallback><a class="btn" href="mailto:?subject=Ownflow%20invite" data-subject="Ownflow invite">Request an invitation</a> <span data-address></span></p>

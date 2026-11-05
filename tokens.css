@@ -1,23 +1,45 @@
-/* Direction A canvas. The website accent is warm amber, not the Mac system blue.
-   #d4923a on #262320 is 5.9:1. #262320 on #d4923a is the same 5.9:1.
-   The app keeps #0071e3 for native controls. Red is only the recording dot. */
+/* Night (spec-brand-night, bn-4): the colour values of
+   _bmad-output/specs/spec-brand-night/tokens.md, the same ones the app carries
+   in apps/desktop/src/styles/theme.css. Dark first; the light values follow
+   prefers-color-scheme. No accent hue: buttons are ink, links are ink and
+   underlined. --color-live is only the recording light in the hero mock.
+   website/test_tokens.py checks the values, every text pair at 4.5:1, control
+   edges at 3:1, and where the live red may appear. */
+
+/* Onest is the one brand typeface (spec-brand-night CAP-2): Onest 2.001,
+   variable wght 400 to 700, self-hosted beside its licence (fonts/OFL.txt).
+   No font is fetched from another host. */
+@font-face {
+  font-family: "Onest";
+  src: url("fonts/onest.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  --color-paper: #262320;
-  --color-ink: #f3eee6;
-  --color-ink-soft: #a89888;
-  --color-accent: #d4923a;
-  --color-on-accent: #262320;
-  --color-rule: #3a342e;
-  --color-focus: #f3eee6;
-  --color-sidebar: #2e2a26;
-  --color-recording: #ff453a;
-  --color-spoken: #a8a7a6;
-  --color-selection: rgba(0, 113, 227, 0.16);
-  --color-tint: rgba(243, 228, 208, 0.04);
+  color-scheme: dark;
 
-  --font-display: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
-  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --color-paper: #1f1f1d;
+  --color-side: #262624;
+  --color-ink: #f2f1ed;
+  --color-meta: #a4a39c;
+  --color-line: #33322f;
+  --color-edge: #77766f;
+  --color-wash: rgba(242, 241, 237, 0.07);
+  --color-panel: #141413;
+  --color-panel-ink: #f2f1ed;
+  --color-panel-meta: #a4a39c;
+  --color-on-ink: #1f1f1d;
+  --color-live: #ff453a;
+  --color-moss: #6fcf97;
+  --color-warning: #fbbf24;
+  --color-focus: var(--color-ink);
+  /* The one shadow: the hero window, as in the Night mockups. */
+  --shadow-window: 0 0 0 1px var(--color-line), 0 18px 44px rgba(0, 0, 0, 0.45);
+
+  --font-display: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
   --text-display: 3rem;
@@ -28,6 +50,9 @@
   --leading-display: 1.05;
   --leading-title: 1.15;
   --leading-body: 1.55;
+  --weight-display: 700;
+  --weight-title: 600;
+  --tracking-display: -0.02em;
 
   --page: 1120px;
   --column: 720px;
@@ -42,19 +67,30 @@
 
   --control: 2.75rem;
   --radius-control: 6px;
+  --radius-window: 14px;
   --focus-width: 2px;
   --focus-offset: 3px;
   --label-col: 9rem;
 }
 
-:root[data-appearance="light"] {
-  --color-paper: #fbfbfb;
-  --color-ink: #0f0f0f;
-  --color-ink-soft: #5e5e5e;
-  --color-rule: #e4e4e4;
-  --color-focus: #0f0f0f;
-  --color-sidebar: #f3f1ee;
-  --color-recording: #ff3b30;
-  --color-spoken: #3a4658;
-  --color-tint: rgba(62, 48, 32, 0.04);
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    --color-paper: #fbfbf9;
+    --color-side: #f3f2ee;
+    --color-ink: #17181c;
+    --color-meta: #5f6068;
+    --color-line: #e7e5df;
+    --color-edge: #8a8983;
+    --color-wash: rgba(23, 24, 28, 0.06);
+    --color-panel: #17181c;
+    --color-panel-ink: #fbfbf9;
+    --color-panel-meta: #a4a39c;
+    --color-on-ink: #fbfbf9;
+    --color-live: #ff453a;
+    --color-moss: #1c754a;
+    --color-warning: #9a3412;
+    --shadow-window: 0 0 0 1px var(--color-line), 0 18px 44px rgba(23, 24, 28, 0.12);
+  }
 }
