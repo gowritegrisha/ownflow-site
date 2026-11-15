@@ -141,13 +141,14 @@
 .mt .nav-bar ul {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .mt .nav-bar a {
+  white-space: nowrap;
   text-decoration: none;
   font-size: 0.9375rem;
 }

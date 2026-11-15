@@ -1,0 +1,24 @@
+# Ownflow
+
+> Ownflow is a voice-first work buddy for Mac (Apple silicon, macOS 14.4 or later). Dictation is free, unlimited and runs on your Mac, so it is private. During online calls, a live meeting partner follows the discussion, uses your context, and drafts what you need next. No bot joins the call, and audio is not stored.
+
+Ownflow is free for everyone during the test. Meetings and cloud features need a Google sign-in, with no invitation. An iPhone app is coming soon. Claude Desktop, Claude Code and Cursor can read your Ownflow meetings through a local, read-only MCP server.
+
+## Product
+
+- [Home](https://ownflow.ai/): What Ownflow does: private dictation, the live meeting partner, context from your calendar, past meetings, screen, Linear, Notion and Slack, and what leaves your Mac.
+- [Meetings](https://ownflow.ai/meetings.html): How meeting notes work, where audio, transcripts and notes go, and how long they are kept.
+- [Connect your AI](https://ownflow.ai/connect-ai.html): Set up Claude Desktop, Claude Code or Cursor to read your Ownflow meetings. The five read-only tools, the trust model and the setup steps.
+- [Pricing](https://ownflow.ai/pricing.html): Free dictation, then €15, €30 and €90 a month for meetings, the live agent and everything.
+- [Download](https://ownflow.ai/download.html): Install steps for the Mac app.
+
+## Trust and help
+
+- [Privacy notice](https://ownflow.ai/privacy.html): What Ownflow stores, who receives it and for how long.
+- [Support](https://ownflow.ai/support.html): Install help, permissions and answers to common questions.
+
+## Optional
+
+- [Terms](https://ownflow.ai/terms.html)
+- [Legal notice](https://ownflow.ai/legal.html)
+- [Full text of the key pages](https://ownflow.ai/llms-full.txt): Home, pricing, connect-ai and download as plain text.

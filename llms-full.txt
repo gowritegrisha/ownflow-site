@@ -1,0 +1,307 @@
+# Ownflow: full text
+
+> Ownflow is a voice-first work buddy for Mac (Apple silicon, macOS 14.4 or later). This file holds the plain text of the home, pricing, connect-ai and download pages. The short index is at https://ownflow.ai/llms.txt.
+
+---
+
+Source: https://ownflow.ai/
+
+# Your voice-first work buddy.
+
+Dictate anywhere, free and private on your Mac. Then bring Ownflow into your calls: it follows the conversation and drafts what you need next.
+
+[Download](https://ownflow.ai/download.html)
+
+Apple silicon, macOS 14.4+ · free
+iPhone coming soon
+
+## Dictation that is free, unlimited and private
+
+Hold Option+Space, say what you want to write, and let go. The text lands where your cursor is, in any app.
+
+Speech is recognized on your Mac, and your audio never leaves it. Most people speak faster than they type, so replies, drafts and notes come out sooner.
+
+Cleanup is optional. With it on, the recognized text is sent for cleanup and not stored.
+
+- Free. No cost and no limit on how much you dictate.
+- Local. Speech recognition runs on your Mac.
+- No account. Download it and start talking.
+
+## A live partner in your online calls
+
+During a call, Ownflow follows what is being discussed and works one step ahead. When an answer, a follow-up or a task is coming, it prepares the draft.
+
+### It follows the call
+
+Ownflow listens from your Mac and keeps up with the topic and the decisions as they happen.
+
+### It drafts what is next
+
+An answer to the question just asked, a follow-up email, the tickets that came out of the call. Ready before you need it.
+
+### You steer, it finishes
+
+Read the draft. Comment on it or add your own input. Ownflow finishes it.
+
+No bot joins the call, so nobody sees a guest in the meeting, and we don't store the audio. You tell the other people on the call that you are using Ownflow. The app doesn't. See [how meeting notes work](https://ownflow.ai/meetings.html).
+
+## It knows your context
+
+Good help depends on what Ownflow knows about the call. It draws on six sources.
+
+### Your calendar
+
+Who is on the call, and what it is for.
+
+### Past meetings
+
+What you agreed last time with the same people.
+
+### Your screen
+
+What you are looking at while you talk.
+
+### Linear
+
+The tickets your team is working on.
+
+### Notion
+
+The docs and notes you already keep.
+
+### Slack
+
+The threads your team is in.
+
+## Connect your AI
+
+Claude Desktop, Claude Code and Cursor can read your Ownflow meetings through a local server on your Mac. Ask them about yesterday's call, or have them turn it into tickets, with no copy and paste.
+
+[Set up Claude Desktop, Claude Code or Cursor](https://ownflow.ai/connect-ai.html)
+
+- Read-only. Agents can read your meetings. They can't change anything.
+- You choose what they see. Including whether they can read the other people's words.
+- Every read is logged. The log is in the app, and it holds no content.
+- Revoke any client. Its next request is refused.
+
+## What leaves your Mac
+
+- Dictation: Audio never leaves your Mac. With cleanup on, the recognized text is sent for cleanup and not stored.
+- Rewrite: The text leaves to produce the rewrite. The selection stays on your Mac.
+- Meetings: The audio leaves to be transcribed, and it isn't stored as a file. The transcript and the notes are stored with your account.
+- Screen question: The window and the question leave for that ask. Ownflow doesn't keep them.
+
+Without an account, Ownflow is dictation only, and your dictation stays on the Mac. What's stored, and for how long, is in the [privacy notice](https://ownflow.ai/privacy.html).
+
+## Questions
+
+### Is Ownflow free?
+
+Dictation is free and unlimited, runs on your Mac and needs no account. Meetings and AI features are paid plans that start at €15 a month. Everything is free for everyone during the test.
+
+### Is my dictation private?
+
+Yes. Speech is recognized on your Mac and your audio never leaves it. If you turn on cleanup, the recognized text is sent for cleanup and not stored.
+
+### Does a bot join my calls?
+
+No. Ownflow listens from your Mac, so nothing joins the call and nobody sees a guest in the meeting. The audio is sent to be transcribed and is not stored as a file. You tell the other people on the call that you are using it.
+
+### Which Macs does it run on?
+
+Macs with Apple silicon, on macOS 14.4 or later.
+
+### Is there an iPhone app?
+
+Not yet. iPhone is coming soon.
+
+### Can I connect my own AI to Ownflow?
+
+Yes. Claude Desktop, Claude Code and Cursor can read your meetings through a local, read-only server on your Mac. You choose what agents can see, every read is logged, and you can revoke a client at any time.
+
+### How much does Ownflow cost?
+
+Free: dictation, unlimited, on your Mac. €15 a month: meetings and summaries. €30 a month: AI features and the proactive live agent. €90 a month: everything, unlimited. Free for everyone during the test.
+
+Dictation is free. Meetings and cloud features need a Google sign-in, with no invitation. Free for everyone during the test. iPhone is coming soon.
+
+[Download](https://ownflow.ai/download.html)
+
+---
+
+Source: https://ownflow.ai/pricing.html
+
+# Pricing
+
+Dictation is free. Add meetings and AI help when you want them. Prices are in euros per month.
+
+Free for everyone during the test.
+
+-
+
+## Free
+
+€0 on your Mac
+
+Dictation, unlimited, on your Mac.
+
+- Unlimited dictation
+- Runs on your Mac
+- No account needed
+-
+
+## Meetings
+
+€15 per month
+
+Meetings and summaries.
+
+- Everything in Free
+- Meeting transcripts and notes
+- Summaries of your calls
+-
+
+## Live agent
+
+€30 per month
+
+AI features and the proactive live agent.
+
+- Everything in Meetings
+- AI features
+- The proactive live agent in your calls
+-
+
+## Everything
+
+€90 per month
+
+Everything, unlimited.
+
+- Everything in Live agent
+- No limits
+
+Nothing is billed during the test. Meetings and cloud features need a Google sign-in, and no invitation is needed.
+
+[Download](https://ownflow.ai/download.html)
+
+Apple silicon, macOS 14.4+. iPhone is coming soon. What each feature stores is in the [privacy notice](https://ownflow.ai/privacy.html).
+
+---
+
+Source: https://ownflow.ai/connect-ai.html
+
+# Connect your AI to Ownflow
+
+Ownflow runs a small server on your Mac. Claude Desktop, Claude Code and Cursor can use it to read your meetings, so you can ask them about yesterday's call without copy and paste.
+
+Try questions like these:
+
+- What did I promise in yesterday's call with Anna?
+- Which calls mentioned the lease?
+- Turn yesterday's call into tickets.
+
+Free for everyone during the test. Meetings and cloud features need a Google sign-in.
+
+## What agents can do
+
+Agents get five tools. All of them only read.
+- `list_meetings`: Lists your ended meetings, newest first, 50 at a time, optionally within a date range.
+- `search_meetings`: Finds meetings by words in the title, the notes, your typed notes and the transcript lines it may read.
+- `get_meeting_notes`: Reads a meeting's latest notes and the notes you typed.
+- `get_transcript`: Reads a meeting transcript. Your own lines always, the other people's lines only if you allow it.
+- `get_vocabulary`: Reads your personal dictionary.
+
+That is the whole list. Agents can't change anything, start or stop a recording, or hear audio. Dictation text stays on your Mac, so agents can't read it. They only see meetings that have ended.
+
+## You stay in control
+
+- Off until you turn it on. Until then, no agent can read anything.
+- Local only. An agent starts Ownflow's own program on your Mac, and that program talks to the app over a private channel on the same Mac. Ownflow opens no network port.
+- You choose about the other people's words. When you turn it on, Ownflow asks whether agents may read what the other people said. Neither answer is preselected. You can change it later.
+- Every read is logged. The log in Ownflow shows when it happened, which client asked, which tool it used and which meetings it read. It holds no content, and it is kept for 30 days on your Mac.
+- Revoke a client any time. Remove one client and its next request is refused, while your other clients keep working. Turn the feature off and every client is refused.
+- Your content is marked as data. Everything an agent reads is wrapped as your content, and the server tells agents not to follow instructions found inside it.
+- Agents are separate companies. What an agent reads goes to its company, under your account with them, for example Anthropic for Claude, or Cursor and the model it uses. Connect only agents you trust with your meetings.
+
+## Set it up
+
+1. Open Ownflow, go to Settings → Agents. and turn on Ownflow for agents. Sign in with Google first if you haven't.
+2. Choose whether agents may read the other people's words.
+3. Add a client. Ownflow shows a ready snippet with your client id and the path to the app. Copy it.
+4. Paste it into your client, as shown below.
+
+Ownflow never edits another app's settings. You paste the snippet yourself. In the examples below, `<ownflow_binary>` and `<id>` stand for the path and the client id. Copy the real snippet from Settings → Agents instead of typing them.
+
+### Claude Desktop
+
+Open `~/Library/Application Support/Claude/claude_desktop_config.json`. Add Ownflow under `mcpServers`, save the file and restart Claude Desktop.
+
+```
+{
+  "mcpServers": {
+    "ownflow": {
+      "command": "<ownflow_binary>",
+      "args": ["--mcp", "--client", "<id>"]
+    }
+  }
+}
+```
+
+### Claude Code
+
+Run this in a terminal. Add `--scope user` before the name to use Ownflow in every project.
+
+```
+claude mcp add ownflow -- <ownflow_binary> --mcp --client <id>
+```
+
+Run `claude mcp list` to check that Ownflow is there.
+
+### Cursor
+
+Open `~/.cursor/mcp.json` and add the same entry as for Claude Desktop. Save the file. If Ownflow doesn't show up in Cursor's MCP settings, restart Cursor.
+
+```
+{
+  "mcpServers": {
+    "ownflow": {
+      "command": "<ownflow_binary>",
+      "args": ["--mcp", "--client", "<id>"]
+    }
+  }
+}
+```
+
+## If it doesn't work
+
+- "Ownflow is not running." Ownflow tries to start itself and waits up to 10 seconds. If it still fails, open Ownflow and try again.
+- "Ownflow for agents is off." Turn it on in Settings → Agents.
+- "This connection was removed." Add the client again in Settings → Agents and paste the new snippet.
+- "Sign in to Ownflow to share meetings." Sign in with Google in Ownflow.
+
+Ownflow for Mac. Apple silicon, macOS 14.4+. Dictation is free.
+
+[Download](https://ownflow.ai/download.html)
+
+---
+
+Source: https://ownflow.ai/download.html
+
+# Download Ownflow
+
+Dictation on your Mac is free. It needs no account and no sign-in.
+
+[Download for Mac Apple silicon, macOS 14.4+](https://github.com/gowritegrisha/ownflow-releases/releases/latest/download/Ownflow-arm64.dmg)
+
+Open the disk image and drag Ownflow to Applications. This test build is not notarized yet, so the first time macOS says it cannot check the developer. Open System Settings → Privacy & Security. , scroll down, click Open Anyway. , then Open. . macOS asks once.
+
+The first run walks you through the microphone, Accessibility and the speech model download. After you allow Accessibility in System Settings, click Ownflow in the menu bar to go back to it.
+
+What changed in each version is in the [release notes](https://github.com/gowritegrisha/ownflow-releases/releases/latest). Test builds do not update themselves: download the newest one from this page.
+
+## Meetings and the cloud
+
+Sign in with Google in Ownflow to turn on meeting notes, cleanup and rewrite. No invitation is needed while the test is open, and it is free. The test has room for 100 people.
+
+It's for personal calls. You tell the other people. The app doesn't.
