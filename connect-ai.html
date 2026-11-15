@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect your AI to Ownflow: Claude Desktop, Claude Code, Cursor</title>
+  <meta name="description" content="Let Claude Desktop, Claude Code or Cursor read your Ownflow meetings through a local, read-only server. You choose what they see, and every read is logged.">
+  <link rel="canonical" href="https://ownflow.ai/connect-ai.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ownflow">
+  <meta property="og:title" content="Connect your AI to Ownflow: Claude Desktop, Claude Code, Cursor">
+  <meta property="og:description" content="Let Claude Desktop, Claude Code or Cursor read your Ownflow meetings through a local, read-only server. You choose what they see, and every read is logged.">
+  <meta property="og:url" content="https://ownflow.ai/connect-ai.html">
+  <meta property="og:image" content="https://ownflow.ai/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ownflow: your voice-first work buddy.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Connect your AI to Ownflow: Claude Desktop, Claude Code, Cursor">
+  <meta name="twitter:description" content="Let Claude Desktop, Claude Code or Cursor read your Ownflow meetings through a local, read-only server. You choose what they see, and every read is logged.">
+  <meta name="twitter:image" content="https://ownflow.ai/og.png">
+  <meta name="theme-color" content="#1f1f1d">
+  <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="mark" href="index.html">
+      <picture>
+        <source srcset="lockup-light.svg" media="(prefers-color-scheme: light)">
+        <img src="lockup-dark.svg" alt="Ownflow" width="147" height="22">
+      </picture>
+    </a>
+    <nav class="nav-bar" aria-label="Pages">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meetings.html">Meetings</a></li>
+        <li><a href="connect-ai.html" aria-current="page">Connect your AI</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="download.html">Download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M2 4.5h14M2 9h14M2 13.5h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </summary>
+      <nav aria-label="Menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="meetings.html">Meetings</a></li>
+          <li><a href="connect-ai.html" aria-current="page">Connect your AI</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </details>
+  </header>
+  <main id="content">
+    <h1>Connect your AI to Ownflow</h1>
+    <p>Ownflow runs a small server on your Mac. Claude Desktop, Claude Code and Cursor can use it to read your meetings, so you can ask them about yesterday's call without copy and paste.</p>
+    <p>Try questions like these:</p>
+    <ul>
+      <li>What did I promise in yesterday's call with Anna?</li>
+      <li>Which calls mentioned the lease?</li>
+      <li>Turn yesterday's call into tickets.</li>
+    </ul>
+    <p class="fine">Free for everyone during the test. Meetings and cloud features need a Google sign-in.</p>
+
+    <h2 id="what-agents-can-do">What agents can do</h2>
+    <p>Agents get five tools. All of them only read.</p>
+    <div>
+    <table class="ledger">
+      <thead>
+        <tr>
+          <th scope="col">Tool</th>
+          <th scope="col">What it does</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><span class="cell-label">Tool</span><span class="cell-value"><code>list_meetings</code></span></th>
+          <td><span class="cell-label">What it does</span><span class="cell-value">Lists your ended meetings, newest first, 50 at a time, optionally within a date range.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">Tool</span><span class="cell-value"><code>search_meetings</code></span></th>
+          <td><span class="cell-label">What it does</span><span class="cell-value">Finds meetings by words in the title, the notes, your typed notes and the transcript lines it may read.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">Tool</span><span class="cell-value"><code>get_meeting_notes</code></span></th>
+          <td><span class="cell-label">What it does</span><span class="cell-value">Reads a meeting's latest notes and the notes you typed.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">Tool</span><span class="cell-value"><code>get_transcript</code></span></th>
+          <td><span class="cell-label">What it does</span><span class="cell-value">Reads a meeting transcript. Your own lines always, the other people's lines only if you allow it.</span></td>
+        </tr>
+        <tr>
+          <th scope="row"><span class="cell-label">Tool</span><span class="cell-value"><code>get_vocabulary</code></span></th>
+          <td><span class="cell-label">What it does</span><span class="cell-value">Reads your personal dictionary.</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>That is the whole list. Agents can't change anything, start or stop a recording, or hear audio. Dictation text stays on your Mac, so agents can't read it. They only see meetings that have ended.</p>
+
+    <h2 id="trust">You stay in control</h2>
+    <ul class="points">
+      <li><strong>Off until you turn it on</strong>Until then, no agent can read anything.</li>
+      <li><strong>Local only</strong>An agent starts Ownflow's own program on your Mac, and that program talks to the app over a private channel on the same Mac. Ownflow opens no network port.</li>
+      <li><strong>You choose about the other people's words</strong>When you turn it on, Ownflow asks whether agents may read what the other people said. Neither answer is preselected. You can change it later.</li>
+      <li><strong>Every read is logged</strong>The log in Ownflow shows when it happened, which client asked, which tool it used and which meetings it read. It holds no content, and it is kept for 30 days on your Mac.</li>
+      <li><strong>Revoke a client any time</strong>Remove one client and its next request is refused, while your other clients keep working. Turn the feature off and every client is refused.</li>
+      <li><strong>Your content is marked as data</strong>Everything an agent reads is wrapped as your content, and the server tells agents not to follow instructions found inside it.</li>
+      <li><strong>Agents are separate companies</strong>What an agent reads goes to its company, under your account with them, for example Anthropic for Claude, or Cursor and the model it uses. Connect only agents you trust with your meetings.</li>
+    </ul>
+
+    <h2 id="setup">Set it up</h2>
+    <ol>
+      <li>Open Ownflow, go to <strong>Settings → Agents</strong> and turn on Ownflow for agents. Sign in with Google first if you haven't.</li>
+      <li>Choose whether agents may read the other people's words.</li>
+      <li>Add a client. Ownflow shows a ready snippet with your client id and the path to the app. Copy it.</li>
+      <li>Paste it into your client, as shown below.</li>
+    </ol>
+    <p>Ownflow never edits another app's settings. You paste the snippet yourself. In the examples below, <code>&lt;ownflow_binary&gt;</code> and <code>&lt;id&gt;</code> stand for the path and the client id. Copy the real snippet from Settings → Agents instead of typing them.</p>
+
+    <h3 id="claude-desktop">Claude Desktop</h3>
+    <p>Open <code>~/Library/Application Support/Claude/claude_desktop_config.json</code>. Add Ownflow under <code>mcpServers</code>, save the file and restart Claude Desktop.</p>
+    <pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;ownflow&quot;: {
+      &quot;command&quot;: &quot;&lt;ownflow_binary&gt;&quot;,
+      &quot;args&quot;: [&quot;--mcp&quot;, &quot;--client&quot;, &quot;&lt;id&gt;&quot;]
+    }
+  }
+}</code></pre>
+
+    <h3 id="claude-code">Claude Code</h3>
+    <p>Run this in a terminal. Add <code>--scope user</code> before the name to use Ownflow in every project.</p>
+    <pre><code>claude mcp add ownflow -- &lt;ownflow_binary&gt; --mcp --client &lt;id&gt;</code></pre>
+    <p>Run <code>claude mcp list</code> to check that Ownflow is there.</p>
+
+    <h3 id="cursor">Cursor</h3>
+    <p>Open <code>~/.cursor/mcp.json</code> and add the same entry as for Claude Desktop. Save the file. If Ownflow doesn't show up in Cursor's MCP settings, restart Cursor.</p>
+    <pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;ownflow&quot;: {
+      &quot;command&quot;: &quot;&lt;ownflow_binary&gt;&quot;,
+      &quot;args&quot;: [&quot;--mcp&quot;, &quot;--client&quot;, &quot;&lt;id&gt;&quot;]
+    }
+  }
+}</code></pre>
+
+    <h2 id="troubleshooting">If it doesn't work</h2>
+    <ul>
+      <li><strong>"Ownflow is not running."</strong> Ownflow tries to start itself and waits up to 10 seconds. If it still fails, open Ownflow and try again.</li>
+      <li><strong>"Ownflow for agents is off."</strong> Turn it on in Settings → Agents.</li>
+      <li><strong>"This connection was removed."</strong> Add the client again in Settings → Agents and paste the new snippet.</li>
+      <li><strong>"Sign in to Ownflow to share meetings."</strong> Sign in with Google in Ownflow.</li>
+    </ul>
+
+    <div class="close">
+      <p>Ownflow for Mac. Apple silicon, macOS 14.4+. Dictation is free.</p>
+      <a class="btn" href="download.html">Download</a>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="legal.html">Legal</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

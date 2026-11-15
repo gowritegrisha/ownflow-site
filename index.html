@@ -3,14 +3,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dictation stays on your Mac. Meeting notes, without a bot.</title>
-  <meta name="description" content="Dictation stays on your Mac. Meeting notes, without a bot.">
-  <meta name="robots" content="noindex">
+  <title>Ownflow: your voice-first work buddy for Mac</title>
+  <meta name="description" content="Ownflow is a voice-first work buddy for Mac. Free, private dictation on your Mac, and a live meeting partner that drafts what you need next.">
+  <link rel="canonical" href="https://ownflow.ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ownflow">
+  <meta property="og:title" content="Ownflow: your voice-first work buddy for Mac">
+  <meta property="og:description" content="Ownflow is a voice-first work buddy for Mac. Free, private dictation on your Mac, and a live meeting partner that drafts what you need next.">
+  <meta property="og:url" content="https://ownflow.ai/">
+  <meta property="og:image" content="https://ownflow.ai/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ownflow: your voice-first work buddy.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ownflow: your voice-first work buddy for Mac">
+  <meta name="twitter:description" content="Ownflow is a voice-first work buddy for Mac. Free, private dictation on your Mac, and a live meeting partner that drafts what you need next.">
+  <meta name="twitter:image" content="https://ownflow.ai/og.png">
   <meta name="theme-color" content="#1f1f1d">
   <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="site.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ownflow",
+  "url": "https://ownflow.ai/",
+  "description": "A voice-first work buddy for Mac. Free, private dictation on your Mac and a live meeting partner that drafts what you need next.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "macOS 14.4 or later (Apple silicon)",
+  "downloadUrl": "https://github.com/gowritegrisha/ownflow-releases/releases/latest/download/Ownflow-arm64.dmg",
+  "image": "https://ownflow.ai/og.png",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "description": "Dictation, unlimited, on your Mac.",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Meetings",
+      "description": "Meetings and summaries, per month.",
+      "price": "15",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Live agent",
+      "description": "AI features and the proactive live agent, per month.",
+      "price": "30",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Everything",
+      "description": "Everything, unlimited, per month.",
+      "price": "90",
+      "priceCurrency": "EUR"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ownflow",
+  "url": "https://ownflow.ai/",
+  "logo": "https://ownflow.ai/lockup-light.svg"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Ownflow free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dictation is free and unlimited, runs on your Mac and needs no account. Meetings and AI features are paid plans that start at €15 a month. Everything is free for everyone during the test."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my dictation private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Speech is recognized on your Mac and your audio never leaves it. If you turn on cleanup, the recognized text is sent for cleanup and not stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a bot join my calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Ownflow listens from your Mac, so nothing joins the call and nobody sees a guest in the meeting. The audio is sent to be transcribed and is not stored as a file. You tell the other people on the call that you are using it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Macs does it run on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Macs with Apple silicon, on macOS 14.4 or later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an iPhone app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. iPhone is coming soon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I connect my own AI to Ownflow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Claude Desktop, Claude Code and Cursor can read your meetings through a local, read-only server on your Mac. You choose what agents can see, every read is logged, and you can revoke a client at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Ownflow cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free: dictation, unlimited, on your Mac. €15 a month: meetings and summaries. €30 a month: AI features and the proactive live agent. €90 a month: everything, unlimited. Free for everyone during the test."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -25,6 +154,7 @@
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="meetings.html">Meetings</a></li>
+        <li><a href="connect-ai.html">Connect your AI</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="privacy.html">Privacy</a></li>
         <li><a href="support.html">Support</a></li>
@@ -40,7 +170,8 @@
       <nav aria-label="Menu">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="meetings.html">Meetings</a></li>
+          <li><a href="meetings.html">Meetings</a></li>
+          <li><a href="connect-ai.html">Connect your AI</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="support.html">Support</a></li>
@@ -50,53 +181,82 @@
   </header>
   <main id="content">
     <div class="hero">
-      <h1><span class="line">Speak anywhere.</span> <span class="line">Remember every call.</span></h1>
-      <div class="hero-copy">
-        <p class="claim">Dictation stays on your Mac. Meeting notes, without a bot.</p>
-        <p class="audience">If you use one app for dictation and another for meeting notes, Ownflow does both in one.</p>
-        <p class="subhead">You tell the other people on the call. We don't keep the audio. Cloud transcription is the paid part.</p>
-        <p class="beta-line">Apple silicon, macOS 14.4+ · free, no account</p>
-        <a class="btn" href="download.html">Download</a>
-      </div>
-      <figure class="shot">
-        <div class="window" aria-hidden="true">
-          <div class="win-shell">
-            <div class="win-side">
-              <div class="win-lights"><i></i><i></i><i></i></div>
-              <div class="win-item on">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="2" width="11" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.2h6M5 8.6h6M5 11h3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                Meetings
-              </div>
-              <div class="win-item">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.1" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.8v1.6M8 12.6v1.6M1.8 8h1.6M12.6 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                Settings
-              </div>
-            </div>
-            <div class="win-col">
-              <div class="win-bar">
-                <span class="win-name">Client check-in</span>
-              </div>
-              <div class="win-pad">
-                <p class="win-title">Client check-in</p>
-                <p class="win-meta">Today, 9:40 AM</p>
-                <div class="win-modes"><b>Notes</b><span>Transcript</span></div>
-                <p class="win-note">Send Maya the revised timeline before Thursday.</p>
-                <p class="win-prompt">Type a note…</p>
-                <div class="win-spoken">
-                  <div class="win-line"><span class="win-who">Me</span><span class="win-clock">12:04</span><span class="win-say">The launch slips if onboarding isn't ready.</span></div>
-                  <div class="win-line"><span class="win-who">Them</span><span class="win-clock">18:22</span><span class="win-say">We can ship Thursday if the copy is locked.</span></div>
-                  <div class="win-line"><span class="win-who">Me</span><span class="win-clock">21:10</span><span class="win-say">I'll send the outline tonight.</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="capsule"><svg class="eclipse" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="disc" fill-rule="evenodd" d="M32 5a27 27 0 1 0 0 54a27 27 0 1 0 0 -54zM37.5 14.5a15 15 0 1 0 0 30a15 15 0 1 0 0 -30z"/><circle class="hole" cx="37.5" cy="29.5" r="15"/></svg>21:10</div>
+      <div>
+        <h1>Your voice-first work buddy.</h1>
+        <p class="lead">Dictate anywhere, free and private on your Mac. Then bring Ownflow into your calls: it follows the conversation and drafts what you need next.</p>
+        <div class="hero-actions">
+          <a class="btn" href="download.html">Download</a>
+          <p class="hero-meta">Apple silicon, macOS 14.4+ · free<br>iPhone coming soon</p>
         </div>
-        <figcaption class="sr-only">Ownflow recording a client check-in. The note asks Maya for the revised timeline before Thursday. The recording pill shows 21:10.</figcaption>
-      </figure>
+      </div>
+      <div class="voice" aria-hidden="true">
+        <div class="keys">
+          <span class="key"><b>⌥</b>option</span>
+          <span class="plus">+</span>
+          <span class="key key-space">space</span>
+        </div>
+        <div class="wave"><i style="--i:0;--h:26%"></i><i style="--i:1;--h:61%"></i><i style="--i:2;--h:82%"></i><i style="--i:3;--h:82%"></i><i style="--i:4;--h:64%"></i><i style="--i:5;--h:40%"></i><i style="--i:6;--h:30%"></i><i style="--i:7;--h:38%"></i><i style="--i:8;--h:38%"></i><i style="--i:9;--h:33%"></i><i style="--i:10;--h:29%"></i><i style="--i:11;--h:26%"></i><i style="--i:12;--h:26%"></i><i style="--i:13;--h:26%"></i><i style="--i:14;--h:26%"></i><i style="--i:15;--h:26%"></i><i style="--i:16;--h:27%"></i><i style="--i:17;--h:26%"></i><i style="--i:18;--h:29%"></i><i style="--i:19;--h:35%"></i><i style="--i:20;--h:43%"></i><i style="--i:21;--h:47%"></i><i style="--i:22;--h:41%"></i><i style="--i:23;--h:29%"></i><i style="--i:24;--h:57%"></i><i style="--i:25;--h:82%"></i><i style="--i:26;--h:92%"></i><i style="--i:27;--h:78%"></i><i style="--i:28;--h:46%"></i><i style="--i:29;--h:41%"></i></div>
+        <p class="voice-cap">Hold, speak, let go.</p>
+      </div>
     </div>
 
-    <h2 class="wide">What leaves your Mac</h2>
+    <section class="band wide" id="dictation" aria-labelledby="dictation-title">
+      <h2 id="dictation-title">Dictation that is free, unlimited and private</h2>
+      <div class="split">
+        <div>
+          <p>Hold Option+Space, say what you want to write, and let go. The text lands where your cursor is, in any app.</p>
+          <p>Speech is recognized on your Mac, and your audio never leaves it. Most people speak faster than they type, so replies, drafts and notes come out sooner.</p>
+          <p class="fine">Cleanup is optional. With it on, the recognized text is sent for cleanup and not stored.</p>
+        </div>
+        <ul class="points">
+          <li><strong>Free</strong>No cost and no limit on how much you dictate.</li>
+          <li><strong>Local</strong>Speech recognition runs on your Mac.</li>
+          <li><strong>No account</strong>Download it and start talking.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band wide" id="meetings" aria-labelledby="meetings-title">
+      <h2 id="meetings-title">A live partner in your online calls</h2>
+      <p>During a call, Ownflow follows what is being discussed and works one step ahead. When an answer, a follow-up or a task is coming, it prepares the draft.</p>
+      <ol class="cards">
+        <li><h3>It follows the call</h3><p>Ownflow listens from your Mac and keeps up with the topic and the decisions as they happen.</p></li>
+        <li><h3>It drafts what is next</h3><p>An answer to the question just asked, a follow-up email, the tickets that came out of the call. Ready before you need it.</p></li>
+        <li><h3>You steer, it finishes</h3><p>Read the draft. Comment on it or add your own input. Ownflow finishes it.</p></li>
+      </ol>
+      <p>No bot joins the call, so nobody sees a guest in the meeting, and we don't store the audio. You tell the other people on the call that you are using Ownflow. The app doesn't. See <a href="meetings.html">how meeting notes work</a>.</p>
+    </section>
+
+    <section class="band wide" id="context" aria-labelledby="context-title">
+      <h2 id="context-title">It knows your context</h2>
+      <p>Good help depends on what Ownflow knows about the call. It draws on six sources.</p>
+      <ul class="cards">
+        <li><h3>Your calendar</h3><p>Who is on the call, and what it is for.</p></li>
+        <li><h3>Past meetings</h3><p>What you agreed last time with the same people.</p></li>
+        <li><h3>Your screen</h3><p>What you are looking at while you talk.</p></li>
+        <li><h3>Linear</h3><p>The tickets your team is working on.</p></li>
+        <li><h3>Notion</h3><p>The docs and notes you already keep.</p></li>
+        <li><h3>Slack</h3><p>The threads your team is in.</p></li>
+      </ul>
+    </section>
+
+    <section class="band wide" id="connect" aria-labelledby="connect-title">
+      <h2 id="connect-title">Connect your AI</h2>
+      <div class="split">
+        <div>
+          <p>Claude Desktop, Claude Code and Cursor can read your Ownflow meetings through a local server on your Mac. Ask them about yesterday's call, or have them turn it into tickets, with no copy and paste.</p>
+          <p><a href="connect-ai.html">Set up Claude Desktop, Claude Code or Cursor</a></p>
+        </div>
+        <ul class="points">
+          <li><strong>Read-only</strong>Agents can read your meetings. They can't change anything.</li>
+          <li><strong>You choose what they see</strong>Including whether they can read the other people's words.</li>
+          <li><strong>Every read is logged</strong>The log is in the app, and it holds no content.</li>
+          <li><strong>Revoke any client</strong>Its next request is refused.</li>
+        </ul>
+      </div>
+    </section>
+
+    <h2 class="wide band" id="leaves">What leaves your Mac</h2>
     <table class="ledger">
       <thead>
         <tr>
@@ -123,10 +283,28 @@
         </tr>
       </tbody>
     </table>
-
     <p class="wide">Without an account, Ownflow is dictation only, and your dictation stays on the Mac. What's stored, and for how long, is in the <a href="privacy.html">privacy notice</a>.</p>
+
+    <section class="band wide" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Questions</h2>
+      <h3>Is Ownflow free?</h3>
+      <p>Dictation is free and unlimited, runs on your Mac and needs no account. Meetings and AI features are paid plans that start at €15 a month. Everything is free for everyone during the test.</p>
+      <h3>Is my dictation private?</h3>
+      <p>Yes. Speech is recognized on your Mac and your audio never leaves it. If you turn on cleanup, the recognized text is sent for cleanup and not stored.</p>
+      <h3>Does a bot join my calls?</h3>
+      <p>No. Ownflow listens from your Mac, so nothing joins the call and nobody sees a guest in the meeting. The audio is sent to be transcribed and is not stored as a file. You tell the other people on the call that you are using it.</p>
+      <h3>Which Macs does it run on?</h3>
+      <p>Macs with Apple silicon, on macOS 14.4 or later.</p>
+      <h3>Is there an iPhone app?</h3>
+      <p>Not yet. iPhone is coming soon.</p>
+      <h3>Can I connect my own AI to Ownflow?</h3>
+      <p>Yes. Claude Desktop, Claude Code and Cursor can read your meetings through a local, read-only server on your Mac. You choose what agents can see, every read is logged, and you can revoke a client at any time.</p>
+      <h3>How much does Ownflow cost?</h3>
+      <p>Free: dictation, unlimited, on your Mac. €15 a month: meetings and summaries. €30 a month: AI features and the proactive live agent. €90 a month: everything, unlimited. Free for everyone during the test.</p>
+    </section>
+
     <div class="close">
-      <p>Dictation is free. Meetings and cloud features need a Google sign-in, and they are free during the test.</p>
+      <p>Dictation is free. Meetings and cloud features need a Google sign-in, with no invitation. Free for everyone during the test. iPhone is coming soon.</p>
       <a class="btn" href="download.html">Download</a>
     </div>
   </main>

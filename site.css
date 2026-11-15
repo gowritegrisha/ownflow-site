@@ -129,6 +129,7 @@ main,
 
 .nav-bar a,
 .site-footer a {
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   height: 1.5rem;
@@ -262,53 +263,294 @@ p {
   margin: 0 0 var(--space-3);
 }
 
-/* The Night line runs across the hero; the copy and the window sit under it. */
+/* Home hero: strong type on the left, a CSS-only voice visual on the right.
+   The visual is two keycaps and a waveform. It is not a picture of the app. */
 .hero {
   display: grid;
-  grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
-  column-gap: var(--space-4);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: var(--space-5);
   align-items: center;
   width: 100%;
+  padding-block: var(--space-4) var(--space-3);
 }
 
 .hero h1 {
-  grid-column: 1 / -1;
-  margin-bottom: var(--space-5);
-  font-size: var(--text-display);
+  margin: 0 0 var(--space-4);
+  font-size: clamp(2.5rem, 6.2vw, 4.5rem);
   font-weight: var(--weight-display);
-  line-height: var(--leading-display);
+  line-height: 1.02;
   letter-spacing: var(--tracking-display);
   text-wrap: balance;
 }
 
-/* Each sentence of the hero line stays whole when the line wraps. */
-.hero h1 .line {
-  display: inline-block;
+.lead {
+  max-width: 34rem;
+  margin: 0 0 var(--space-4);
+  font-size: 1.25rem;
+  line-height: 1.45;
 }
 
-.claim {
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+}
+
+.hero .btn,
+.close .btn {
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+
+.hero-meta {
   margin: 0;
-  font-size: 22px;
-  line-height: 1.3;
-}
-
-.audience {
-  margin: var(--space-4) 0 0;
-}
-
-.subhead {
-  margin: var(--space-3) 0 0;
-  color: var(--color-meta);
-}
-
-.hero .btn {
-  margin-top: var(--under-h1);
-}
-
-.beta-line {
-  margin: var(--space-3) 0 0;
   color: var(--color-meta);
   font-size: var(--text-small);
+  line-height: 1.5;
+}
+
+.voice {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: center;
+  padding: var(--space-5) var(--space-4) var(--space-4);
+  border-radius: var(--radius-window);
+  background: var(--color-panel);
+  color: var(--color-panel-ink);
+  box-shadow: var(--shadow-window);
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.key {
+  display: grid;
+  align-content: end;
+  justify-items: start;
+  min-width: 4.5rem;
+  height: 4.25rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--color-edge);
+  border-radius: 0.6rem;
+  background: var(--color-side);
+  color: var(--color-ink);
+  box-shadow: 0 3px 0 var(--color-line);
+  font-size: var(--text-small);
+  line-height: 1.1;
+}
+
+.key b {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.key-space {
+  min-width: 8.5rem;
+}
+
+.keys .plus {
+  color: var(--color-panel-meta);
+}
+
+.wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  height: 4.5rem;
+}
+
+.wave i {
+  flex: 1 1 0;
+  max-width: 6px;
+  height: var(--h);
+  border-radius: 3px;
+  background: var(--color-panel-ink);
+  animation: wave 1.6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -110ms);
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave i {
+    animation: none;
+  }
+}
+
+.voice-cap {
+  margin: 0;
+  color: var(--color-panel-meta);
+  font-size: var(--text-small);
+}
+
+/* Home and feature sections. */
+.band {
+  margin-top: var(--space-section);
+  padding-top: var(--space-section);
+  border-top: 1px solid var(--color-line);
+}
+
+.band > h2 {
+  margin-top: 0;
+}
+
+.band > h2 + p {
+  max-width: var(--column);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4) var(--space-5);
+  align-items: start;
+}
+
+.split > div > :last-child {
+  margin-bottom: 0;
+}
+
+.points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.points li {
+  margin: 0;
+  padding-block: var(--space-3);
+  border-top: 1px solid var(--color-line);
+}
+
+.points strong {
+  display: block;
+  font-weight: 600;
+}
+
+.band h3 {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: 1.125rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards > li {
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-window);
+  background: var(--color-side);
+}
+
+main .cards > li + li {
+  margin-top: 0;
+}
+
+.cards h3 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.125rem;
+}
+
+.cards p {
+  margin: 0;
+  color: var(--color-meta);
+}
+
+.fine {
+  color: var(--color-meta);
+  font-size: var(--text-small);
+}
+
+/* Pricing cards. */
+.tiers h2 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.125rem;
+}
+
+.tiers .price {
+  margin: 0 0 var(--space-3);
+  color: var(--color-ink);
+  font-size: 2.25rem;
+  font-weight: var(--weight-display);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-display);
+}
+
+.tiers .price small {
+  color: var(--color-meta);
+  font-size: var(--text-small);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.tiers p {
+  color: var(--color-ink);
+}
+
+.tiers ul {
+  margin: var(--space-3) 0 0;
+  padding-left: 1.1em;
+  color: var(--color-meta);
+  font-size: 0.9375rem;
+}
+
+main .tiers li li {
+  margin-top: var(--space-2);
+}
+
+.test-line {
+  margin: var(--space-3) 0 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-edge);
+  border-radius: var(--radius-control);
+  font-weight: 600;
+}
+
+/* Code in text and in snippets. */
+:not(pre) > code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--color-wash);
+}
+
+pre {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-control);
+  background: var(--color-panel);
+  color: var(--color-panel-ink);
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+pre code {
+  font-size: inherit;
 }
 
 .close {
@@ -413,12 +655,6 @@ button.btn {
   margin-block: var(--space-3);
 }
 
-.shot {
-  container-type: inline-size;
-  min-width: 0;
-  margin: 0;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -433,231 +669,6 @@ button.btn {
 
 .detail {
   display: none;
-}
-
-.window {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 0.75em;
-  background: var(--color-paper);
-  color: var(--color-ink);
-  font-size: calc(100cqi / 45);
-  box-shadow: var(--shadow-window);
-}
-
-.win-shell {
-  display: flex;
-  align-items: stretch;
-}
-
-.win-side {
-  width: 11em;
-  flex: none;
-  padding: 1.15em 0.65em 0.8em;
-  background: var(--color-side);
-  box-shadow: inset -1px 0 0 var(--color-line);
-}
-
-.win-lights {
-  display: flex;
-  gap: 0.5em;
-  margin: 0 0 1.15em 0.4em;
-}
-
-.win-lights i {
-  display: block;
-  width: 0.75em;
-  height: 0.75em;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.28);
-}
-
-.win-lights i:nth-child(1) { background: #ff5f57; }
-.win-lights i:nth-child(2) { background: #febc2e; }
-.win-lights i:nth-child(3) { background: #28c840; }
-
-.win-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  height: 1.75em;
-  margin: 0.05em 0;
-  padding: 0 0.5em;
-  border-radius: 0.375em;
-  font-size: 0.8125em;
-  line-height: 1.75em;
-}
-
-.win-item svg {
-  width: 1em;
-  height: 1em;
-  flex: none;
-}
-
-.win-item.on {
-  background: var(--color-wash);
-}
-
-.win-col {
-  min-width: 0;
-  flex: 1;
-}
-
-.win-bar,
-.win-live {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0 1.15em;
-}
-
-.win-bar {
-  height: 3.25em;
-}
-
-.win-live {
-  height: 2.25em;
-  border-bottom: 1px solid var(--color-line);
-}
-
-.win-name,
-.win-time,
-.win-quiet {
-  font-size: 0.8125em;
-}
-
-.win-name {
-  font-weight: 600;
-}
-
-.win-search {
-  margin-left: auto;
-  display: grid;
-  place-items: center;
-}
-
-.win-time {
-  font-variant-numeric: tabular-nums;
-}
-
-.win-push {
-  margin-left: auto;
-}
-
-.win-pad {
-  padding: 1em 1.35em 1.35em;
-}
-
-.win-title {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.375em;
-  font-weight: 500;
-  line-height: 1.25;
-}
-
-.win-meta {
-  margin-top: 0.3em;
-  color: var(--color-meta);
-  font-size: 0.8125em;
-}
-
-.win-modes {
-  display: flex;
-  gap: 1em;
-  margin: 0.9em 0 0.75em;
-  font-size: 0.8125em;
-}
-
-.win-modes b {
-  font-weight: 600;
-  border-bottom: 1px solid var(--color-ink);
-  padding-bottom: 0.15em;
-}
-
-.win-modes span {
-  color: var(--color-meta);
-  font-weight: 400;
-}
-
-.win-note,
-.win-prompt {
-  margin: 0;
-  max-width: 36em;
-  font-family: var(--font-display);
-  font-size: 1em;
-  line-height: 1.55;
-}
-
-.win-prompt {
-  margin-top: 0.5em;
-  color: var(--color-meta);
-}
-
-.win-spoken {
-  margin-top: 0.9em;
-  max-width: 36em;
-  padding: 0.5em 0.65em;
-  border-radius: 0.5em;
-  background: var(--color-wash);
-}
-
-.win-line {
-  display: grid;
-  grid-template-columns: 2.6em 3em minmax(0, 1fr);
-  gap: 0.45em;
-  padding: 0.25em 0;
-  font-size: 0.9375em;
-  line-height: 1.4;
-}
-
-.win-who,
-.win-clock {
-  color: var(--color-meta);
-  font-size: 0.85em;
-  padding-top: 0.15em;
-}
-
-.win-clock {
-  font-variant-numeric: tabular-nums;
-}
-
-.win-say {
-  color: var(--color-meta);
-}
-
-.capsule {
-  position: absolute;
-  top: 0.7em;
-  right: 1em;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  height: 2em;
-  padding: 0 0.75em 0 0.6em;
-  border-radius: 999px;
-  background: var(--color-panel);
-  color: var(--color-panel-ink);
-  font-size: 0.8125em;
-  font-variant-numeric: tabular-nums;
-  box-shadow: 0 0 0 1px var(--color-line);
-}
-
-/* The widget pill while recording: the live light fills the Eclipse hole. */
-.capsule .eclipse {
-  width: 1.15em;
-  height: 1.15em;
-  flex: none;
-}
-
-.eclipse .disc {
-  fill: currentColor;
-}
-
-.eclipse .hole {
-  fill: var(--color-live);
 }
 
 .does {
@@ -690,7 +701,7 @@ button.btn {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: var(--space-4) 0 0;
+  margin: var(--space-4) 0 var(--space-3);
 }
 
 .ledger,
@@ -722,6 +733,15 @@ tbody th {
 
 .cell-label {
   display: none;
+}
+
+.ledger tbody th code {
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.ledger tbody th {
+  padding-right: var(--space-4);
 }
 
 .ledger thead th {
@@ -831,7 +851,8 @@ code {
   padding-bottom: var(--space-5);
 }
 
-@media (max-width: 46rem) {
+/* Six links and the button need about 56rem. Below it, they fold into the menu. */
+@media (max-width: 56rem) {
   .nav-bar {
     display: none;
   }
@@ -839,59 +860,40 @@ code {
   .nav-menu {
     display: block;
   }
+}
 
+@media (max-width: 46rem) {
   h1 {
     font-size: 1.75rem;
   }
 
   .hero {
     display: block;
-    width: auto;
+    padding-top: 0;
   }
 
   .hero h1 {
-    margin-bottom: var(--space-4);
-    font-size: clamp(1.75rem, 8.2vw, 2.35rem);
+    font-size: clamp(2.25rem, 11vw, 3rem);
   }
 
-  .hero .btn {
-    display: none;
+  .lead {
+    font-size: 1.125rem;
   }
 
-  .shot {
-    width: 100vw;
-    height: auto;
-    margin-top: var(--under-h2);
-    margin-left: calc(50% - 50vw);
-    overflow: hidden;
-    border-radius: 0;
+  .voice {
+    margin-top: var(--space-5);
   }
 
-  .window {
-    display: block;
-    height: auto;
-    font-size: 16px;
-    border-radius: 0;
+  .key {
+    min-width: 3.75rem;
   }
 
-  .win-side,
-  .win-bar,
-  .win-meta,
-  .win-modes,
-  .win-prompt {
-    display: none;
+  .key-space {
+    min-width: 6.5rem;
   }
 
-  .win-pad {
-    padding-right: 6.5rem;
-  }
-
-  .capsule {
-    top: 0.75rem;
-    right: 0.75rem;
-    left: auto;
-    transform: none;
-    font-size: 13px;
+  .split {
+    grid-template-columns: 1fr;
   }
 
   .close {
