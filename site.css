@@ -213,7 +213,7 @@ main {
   padding-bottom: var(--space-section);
 }
 
-main > :not(.hero):not(.ledger):not(.close):not(.wide) {
+main > :not(.hero):not(.mt-hero):not(.ledger):not(.close):not(.wide) {
   width: min(var(--column), 100%);
   margin-inline: auto;
 }
@@ -933,4 +933,318 @@ code {
 /* contact.js hides the mail buttons while support.json has no address. */
 [hidden] {
   display: none !important;
+}
+
+/* Meetings page. Night tokens only; the live red stays in the recording pill. */
+.mt-hero {
+  display: grid;
+  grid-template-columns: minmax(16rem, 24rem) minmax(0, 1fr);
+  column-gap: var(--space-5);
+  align-items: center;
+  width: 100%;
+}
+
+.mt-kicker {
+  margin: 0 0 var(--space-2);
+  color: var(--color-meta);
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+.mt-hero h1 {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-title);
+  font-weight: var(--weight-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+
+.mt-hero h1 .line {
+  display: block;
+}
+
+.mt-hero .btn {
+  margin-top: var(--under-h1);
+}
+
+/* The hero window: typed notes, then "Make notes", then the notes. A 14 s loop. */
+.mt-stage {
+  display: grid;
+  min-height: 15em;
+  margin-top: 0.9em;
+}
+
+.mt-stage > * {
+  grid-area: 1 / 1;
+}
+
+.mt-raw,
+.mt-made {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  align-items: flex-start;
+}
+
+.mt-raw {
+  animation: mt-raw 14s infinite;
+}
+
+.mt-made {
+  opacity: 0;
+  animation: mt-made 14s infinite;
+}
+
+.mt-l2 { opacity: 0; animation: mt-l2 14s infinite; }
+.mt-l3 { opacity: 0; animation: mt-l3 14s infinite; }
+
+.mt-gen {
+  margin-top: 0.9em;
+  padding: 0.45em 0.9em;
+  border-radius: 999px;
+  background: var(--color-panel);
+  color: var(--color-panel-ink);
+  font-size: 0.8125em;
+  font-weight: 600;
+  opacity: 0;
+  animation: mt-gen 14s infinite;
+}
+
+.mt-work {
+  align-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  justify-self: start;
+  padding: 0.45em 0.9em;
+  border-radius: 999px;
+  background: var(--color-wash);
+  color: var(--color-meta);
+  font-size: 0.8125em;
+  opacity: 0;
+  animation: mt-work 14s infinite;
+}
+
+.mt-dot {
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background: var(--color-meta);
+}
+
+.mt-h {
+  margin: 0.5em 0 0;
+  color: var(--color-meta);
+  font-size: 0.8125em;
+  font-weight: 600;
+}
+
+@keyframes mt-raw {
+  0%, 56% { opacity: 1; }
+  62%, 97% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes mt-l2 {
+  0%, 14% { opacity: 0; }
+  20%, 100% { opacity: 1; }
+}
+
+@keyframes mt-l3 {
+  0%, 28% { opacity: 0; }
+  34%, 100% { opacity: 1; }
+}
+
+@keyframes mt-gen {
+  0%, 42% { opacity: 0; }
+  46%, 56% { opacity: 1; }
+  60%, 100% { opacity: 0; }
+}
+
+@keyframes mt-work {
+  0%, 57% { opacity: 0; }
+  60%, 66% { opacity: 1; }
+  70%, 100% { opacity: 0; }
+}
+
+@keyframes mt-made {
+  0%, 66% { opacity: 0; }
+  72%, 93% { opacity: 1; }
+  98%, 100% { opacity: 0; }
+}
+
+/* Reduced motion: show the finished notes and nothing moves. */
+@media (prefers-reduced-motion: reduce) {
+  .mt-raw,
+  .mt-l1,
+  .mt-l2,
+  .mt-l3,
+  .mt-gen,
+  .mt-work {
+    animation: none;
+  }
+
+  .mt-raw,
+  .mt-gen,
+  .mt-work {
+    opacity: 0;
+  }
+
+  .mt-made {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* The walkthrough: a sticky list on the left, the three moments on the right. */
+.mt-walk,
+.mt-split {
+  margin-top: var(--space-section);
+}
+
+.mt-walk-grid {
+  display: grid;
+  grid-template-columns: minmax(10rem, 14rem) minmax(0, 1fr);
+  column-gap: var(--space-5);
+  align-items: start;
+}
+
+.mt-tabs {
+  position: sticky;
+  top: var(--space-5);
+}
+
+.mt-tabs ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mt-tabs li + li {
+  margin-top: 0;
+}
+
+main .mt-tabs a:not(.btn) {
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-meta);
+  text-decoration: none;
+}
+
+main .mt-tabs a[aria-current="true"] {
+  color: var(--color-ink);
+  border-bottom: 2px solid var(--color-ink);
+  font-weight: 600;
+}
+
+.mt-step {
+  padding-bottom: var(--space-5);
+  scroll-margin-top: var(--space-5);
+}
+
+.mt-step h3 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-section);
+  font-weight: var(--weight-title);
+  line-height: var(--leading-title);
+}
+
+.mt-step p {
+  max-width: var(--column);
+}
+
+.mt-card {
+  max-width: 34rem;
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-window);
+  background: var(--color-side);
+  box-shadow: 0 0 0 1px var(--color-line);
+}
+
+.mt-card .win-spoken {
+  margin-top: 0;
+  max-width: none;
+}
+
+.mt-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.mt-chips span,
+.mt-chips b {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: var(--text-small);
+}
+
+.mt-chips span {
+  background: var(--color-wash);
+  color: var(--color-meta);
+}
+
+.mt-chips b {
+  background: var(--color-panel);
+  color: var(--color-panel-ink);
+  font-weight: 600;
+}
+
+.mt-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0.6rem 0;
+  font-size: var(--text-small);
+}
+
+.mt-list > div + div {
+  border-top: 1px solid var(--color-line);
+}
+
+.mt-list > div span:last-child {
+  color: var(--color-meta);
+}
+
+.mt-split p {
+  max-width: var(--column);
+}
+
+@media (max-width: 46rem) {
+  .mt-hero {
+    display: block;
+    width: auto;
+  }
+
+  .mt-hero h1 {
+    font-size: clamp(1.75rem, 8.2vw, 2.35rem);
+  }
+
+  .mt-hero .btn {
+    display: none;
+  }
+
+  .mt-stage {
+    min-height: 13em;
+  }
+
+  .mt-walk-grid {
+    display: block;
+  }
+
+  .mt-tabs {
+    display: none;
+  }
+}
+
+.ledger + p.wide {
+  margin-top: var(--space-3);
+}
+
+.nb {
+  white-space: nowrap;
 }
