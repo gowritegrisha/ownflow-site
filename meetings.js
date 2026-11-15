@@ -1,6 +1,14 @@
-// Meetings page: marks the walkthrough tab for the step in view.
-// Plain script, no third-party code. Without it the three steps still read in order.
+// Meetings page: the header pill gains a box once you scroll, and the
+// walkthrough tab marks the step in view. Plain script, no third-party code.
+// Without it the page still reads top to bottom.
 (function () {
+  var body = document.body;
+  function onScroll() {
+    body.classList.toggle("scrolled", window.scrollY > 40);
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
   var links = document.querySelectorAll(".mt-tabs a");
   var steps = document.querySelectorAll(".mt-step");
   if (!links.length || !steps.length || !("IntersectionObserver" in window)) return;

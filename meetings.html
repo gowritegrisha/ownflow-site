@@ -6,21 +6,16 @@
   <title>Meetings — Dictation stays on your Mac. Meeting notes, without a bot.</title>
   <meta name="description" content="Ownflow records your call from your Mac and turns your notes and the transcript into meeting notes. No bot joins.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#1f1f1d">
-  <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f8f7f3">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="tokens.css">
-  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="meetings.css">
 </head>
-<body>
+<body class="mt">
   <a class="skip" href="#content">Skip to content</a>
   <header class="site-header">
-    <a class="mark" href="index.html">
-      <picture>
-        <source srcset="lockup-light.svg" media="(prefers-color-scheme: light)">
-        <img src="lockup-dark.svg" alt="Ownflow" width="147" height="22">
-      </picture>
-    </a>
+    <a class="mark" href="index.html"><img src="lockup-light.svg" alt="Ownflow" width="147" height="22"></a>
     <nav class="nav-bar" aria-label="Pages">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -48,63 +43,63 @@
       </nav>
     </details>
   </header>
+
   <main id="content">
-    <div class="mt-hero">
-      <div class="mt-hero-copy">
-        <p class="mt-kicker">Meetings</p>
-        <h1><span class="line">Notes for <span class="nb">back-to-back</span> calls.</span> <span class="line">No bot in the room.</span></h1>
-        <p class="claim">Ownflow listens from your Mac, so nobody has to admit a bot.</p>
-        <p class="subhead">Type what matters while you talk. When the call ends, your notes and the transcript become meeting notes you can edit.</p>
-        <p class="beta-line">Apple silicon, macOS 14.4+ · free during the test</p>
-        <a class="btn" href="download.html">Download</a>
+    <section class="mt-hero">
+      <div>
+        <a class="mt-badge" href="download.html"><b>New</b> Meeting notes, no bot →</a>
+        <h1>Notes for <span class="nb">back-to-back</span> calls</h1>
+        <p class="sub">Ownflow listens from your Mac. Nobody has to admit a bot.</p>
+        <p class="act"><a class="btn big" href="download.html">Download for free ↓</a></p>
+        <p class="plat">Apple silicon, macOS 14.4+ · free during the test</p>
       </div>
-      <figure class="shot mt-shot">
-        <div class="window" aria-hidden="true">
-          <div class="win-shell">
-            <div class="win-side">
-              <div class="win-lights"><i></i><i></i><i></i></div>
-              <div class="win-item on">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="2" width="11" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.2h6M5 8.6h6M5 11h3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                Meetings
-              </div>
-              <div class="win-item">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.1" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.8v1.6M8 12.6v1.6M1.8 8h1.6M12.6 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-                Settings
-              </div>
+      <figure class="mt-art" style="margin:0">
+        <div class="halftone" aria-hidden="true"></div>
+        <div class="lime" aria-hidden="true"></div>
+        <div class="ink" aria-hidden="true"></div>
+        <div class="mt-card" aria-hidden="true">
+          <div class="mt-lights"><i></i><i></i><i></i></div>
+          <p class="title">Client check-in</p>
+          <div class="mt-pills"><span>Today</span><span>2 people</span></div>
+          <div class="mt-stage">
+            <div class="mt-raw">
+              <p>Send Maya the revised timeline before Thursday.</p>
+              <p>Ask if the onboarding copy is locked.</p>
+              <p>Launch slips if onboarding isn't ready.</p>
             </div>
-            <div class="win-col">
-              <div class="win-bar">
-                <span class="win-name">Client check-in</span>
-              </div>
-              <div class="win-pad">
-                <p class="win-title">Client check-in</p>
-                <p class="win-meta">Today, 9:40 AM</p>
-                <div class="mt-stage">
-                  <div class="mt-raw">
-                    <p class="win-note mt-l1">Send Maya the revised timeline before Thursday.</p>
-                    <p class="win-note mt-l2">Ask if onboarding copy is locked.</p>
-                    <p class="win-note mt-l3">Launch slips if onboarding isn't ready.</p>
-                    <span class="mt-gen">Make notes</span>
-                  </div>
-                  <div class="mt-work"><span class="mt-dot"></span>Making notes</div>
-                  <div class="mt-made">
-                    <p class="mt-h">Decisions</p>
-                    <p class="win-note">Ship Thursday if the copy is locked.</p>
-                    <p class="mt-h">Next steps</p>
-                    <p class="win-note">Send Maya the revised timeline before Thursday.</p>
-                    <p class="win-note">Send the outline tonight.</p>
-                  </div>
-                </div>
-              </div>
+            <span class="mt-make">✦ Make notes</span>
+            <div class="mt-work"><i></i>Making notes</div>
+            <div class="mt-made">
+              <p class="h">Decisions</p>
+              <ul><li>Ship Thursday if the copy is locked.</li></ul>
+              <p class="h">Next steps</p>
+              <ul><li>Send Maya the revised timeline before Thursday.</li><li>Send the outline tonight.</li></ul>
             </div>
           </div>
-          <div class="capsule"><svg class="eclipse" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path class="disc" fill-rule="evenodd" d="M32 5a27 27 0 1 0 0 54a27 27 0 1 0 0 -54zM37.5 14.5a15 15 0 1 0 0 30a15 15 0 1 0 0 -30z"/><circle class="hole" cx="37.5" cy="29.5" r="15"/></svg>21:10</div>
         </div>
-        <figcaption class="sr-only">Ownflow during a client check-in. Three typed notes turn into meeting notes with one decision, to ship Thursday if the copy is locked, and two next steps. The recording pill shows 21:10.</figcaption>
+        <div class="mt-call" aria-hidden="true">
+          <div class="mt-tile"><span>Me</span><span class="mt-bars"><i></i><i></i><i></i><i></i></span></div>
+          <div class="mt-tile"><span>Them</span><span class="mt-bars"><i></i><i></i><i></i><i></i></span></div>
+          <div class="mt-rec"><i></i>21:10</div>
+        </div>
+        <figcaption class="sr-only">Ownflow during a client check-in. Three typed notes turn into meeting notes with one decision, to ship Thursday if the copy is locked, and two next steps. A recording tile shows Me and Them and a timer at 21:10.</figcaption>
       </figure>
-    </div>
+    </section>
 
-    <section class="wide mt-walk" aria-labelledby="walk-title">
+    <div class="mt-wrap"><h2 class="mt-peek" aria-hidden="true">Nobody joins.</h2></div>
+    <section class="mt-dark" aria-labelledby="goes-title">
+      <div class="mt-wrap">
+        <h2 id="goes-title" class="lede">Ownflow records on your Mac. Here is where each part of a meeting goes.</h2>
+        <div class="mt-grid">
+          <div><h3>Audio</h3><p>Leaves your Mac to be transcribed. We don't keep it as a file, and it is deleted from your Mac once its transcript is saved.</p></div>
+          <div><h3>Transcript</h3><p>Stored with your account. Deleted after 90 days.</p></div>
+          <div><h3>Meeting notes</h3><p>Stored with your account. Deleted after 12 months.</p></div>
+          <div><h3>Your typed notes</h3><p>Kept, with the title, until you delete the meeting.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-walk mt-wrap" aria-labelledby="walk-title">
       <h2 id="walk-title">One meeting, three moments</h2>
       <div class="mt-walk-grid">
         <nav class="mt-tabs" aria-label="On this page">
@@ -119,25 +114,23 @@
             <h3>During the call</h3>
             <p>Press Cmd+Shift+M, or let Ownflow start when a call does. It records your microphone as Me and the call audio as Them, on your Mac, with no bot joining. Use headphones. Ownflow warns you when the sound is going to the speakers.</p>
             <p>A recording pill stays on screen the whole time. If someone objects, pause, stop and discard, or delete the Them channel right there. Text you dictate with push-to-talk stays out of the meeting record. A marker shows where it happened.</p>
-            <div class="mt-card" aria-hidden="true">
-              <div class="win-spoken">
-                <div class="win-line"><span class="win-who">Me</span><span class="win-clock">12:04</span><span class="win-say">The launch slips if onboarding isn't ready.</span></div>
-                <div class="win-line"><span class="win-who">Them</span><span class="win-clock">18:22</span><span class="win-say">We can ship Thursday if the copy is locked.</span></div>
-              </div>
+            <div class="mt-panel" aria-hidden="true">
+              <div class="row"><span>Me</span><span>12:04</span><span>The launch slips if onboarding isn't ready.</span></div>
+              <div class="row"><span>Them</span><span>18:22</span><span>We can ship Thursday if the copy is locked.</span></div>
             </div>
           </article>
           <article class="mt-step" id="after">
             <h3>Right after</h3>
             <p>Your typed notes, the transcript and a template become structured notes. Your own words are kept as you wrote them. Edit the result, or make the notes again. The earlier version is kept.</p>
             <p>The transcript follows the languages on the call, including a mix. The notes are written in English for now, whatever language the call used.</p>
-            <div class="mt-card mt-chips" aria-hidden="true">
+            <div class="mt-panel mt-chips" aria-hidden="true">
               <span>Typed notes</span><span>Transcript</span><span>Template</span><b>Meeting notes</b>
             </div>
           </article>
           <article class="mt-step" id="later">
             <h3>Later</h3>
             <p>Past meetings are in one list. Open one to read the notes or the transcript. Delete any meeting and its transcript, typed notes and notes go with it.</p>
-            <div class="mt-card mt-list" aria-hidden="true">
+            <div class="mt-panel mt-list" aria-hidden="true">
               <div><span>Client check-in</span><span>Today</span></div>
               <div><span>Design review</span><span>Tuesday</span></div>
               <div><span>Weekly planning</span><span>Monday</span></div>
@@ -147,44 +140,42 @@
       </div>
     </section>
 
-    <section class="wide mt-split" aria-labelledby="bot-title">
-      <h2 id="bot-title">No bot, so you tell people</h2>
-      <p>Nothing joins the call, so nobody sees a guest called "Notetaker". That also means Ownflow can't announce itself. You tell the other people on the call that you are recording, and the recording pill is there for you to show them.</p>
+    <section class="mt-green" aria-labelledby="words-title">
+      <div class="mt-wrap inner">
+        <div>
+          <p class="kicker">Ownflow notes</p>
+          <h2 id="words-title">Your words, kept word for word</h2>
+          <p class="txt">Type while you talk. Ownflow keeps what you wrote exactly as you wrote it, and builds the rest of the notes around it from the transcript.</p>
+        </div>
+        <div class="mt-note" aria-hidden="true">
+          <p class="typed">Send Maya the revised timeline before Thursday.<span class="cursor"></span></p>
+          <span class="chip"><i>T</i>Typed notes</span>
+        </div>
+      </div>
     </section>
 
-    <h2 class="wide" id="leaves">What leaves your Mac, and what stays</h2>
-    <table class="ledger">
-      <thead>
-        <tr>
-          <th scope="col">Part of a meeting</th>
-          <th scope="col">What happens to it</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"><span class="cell-label">Part of a meeting</span><span class="cell-value">Audio</span></th>
-          <td><span class="cell-label">What happens to it</span><span class="cell-value">It leaves your Mac to be transcribed. We don't keep it as a file, and it is deleted from your Mac once its transcript is saved.</span></td>
-        </tr>
-        <tr>
-          <th scope="row"><span class="cell-label">Part of a meeting</span><span class="cell-value">Transcript</span></th>
-          <td><span class="cell-label">What happens to it</span><span class="cell-value">Stored with your account. Deleted after 90 days.</span></td>
-        </tr>
-        <tr>
-          <th scope="row"><span class="cell-label">Part of a meeting</span><span class="cell-value">Meeting notes</span></th>
-          <td><span class="cell-label">What happens to it</span><span class="cell-value">Stored with your account. Deleted after 12 months.</span></td>
-        </tr>
-        <tr>
-          <th scope="row"><span class="cell-label">Part of a meeting</span><span class="cell-value">Your typed notes and the title</span></th>
-          <td><span class="cell-label">What happens to it</span><span class="cell-value">Kept until you delete the meeting.</span></td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="wide">Delete a meeting at any time and all of it goes. The full list is in the <a href="privacy.html">privacy notice</a>.</p>
-
-    <div class="close">
-      <p>Dictation is free. Meetings need a Google sign-in, and they are free during the test.</p>
-      <a class="btn" href="download.html">Download</a>
-    </div>
+    <section class="mt-privacy mt-wrap" aria-labelledby="priv-title">
+      <div class="head">
+        <h2 id="priv-title">Private by default, yours to delete</h2>
+        <p>Delete a meeting at any time and its transcript, typed notes and notes go with it. The full list is in the <a href="privacy.html">privacy notice</a>.</p>
+      </div>
+      <div class="mt-scene" aria-hidden="true">
+        <div class="mt-modal">
+          <h3>Client check-in</h3>
+          <dl>
+            <div><dt>Audio</dt><dd>Deleted from your Mac once its transcript is saved.</dd></div>
+            <div><dt>Transcript</dt><dd>Deleted after 90 days.</dd></div>
+            <div><dt>Notes</dt><dd>Deleted after 12 months.</dd></div>
+            <div><dt>Typed notes</dt><dd>Kept until you delete the meeting.</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="mt-tell"><b>No bot, so you tell people.</b>Nothing joins the call, so nobody sees a guest called "Notetaker". That also means Ownflow can't announce itself. You tell the other people on the call that you are recording, and the recording pill is there for you to show them.</p>
+      <div class="mt-cta">
+        <p>Dictation is free. Meetings need a Google sign-in, and they are free during the test.</p>
+        <a class="btn big" href="download.html">Download for free ↓</a>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <nav aria-label="Footer">
@@ -195,6 +186,7 @@
         <li><a href="legal.html">Legal</a></li>
       </ul>
     </nav>
+    <img class="mt-giant" src="lockup-light.svg" alt="" width="500" height="75">
   </footer>
   <script src="meetings.js"></script>
 </body>
