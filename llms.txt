@@ -20,5 +20,6 @@ Ownflow is free for everyone during the test. Meetings and cloud features need a
 ## Optional
 
 - [Terms](https://ownflow.ai/terms.html)
+- [Changelog](https://ownflow.ai/changelog.html)
 - [Legal notice](https://ownflow.ai/legal.html)
 - [Full text of the key pages](https://ownflow.ai/llms-full.txt): Home, pricing, connect-ai and download as plain text.
