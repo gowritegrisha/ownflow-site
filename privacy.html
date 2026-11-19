@@ -65,7 +65,7 @@
   </header>
   <main id="content">
     <h1>Privacy</h1>
-    <p>Version 2026-11-04.2. This notice covers two things. First, the free Ownflow app for Mac, which you use without an account. Second, invited accounts, which add sign-in, cleanup, rewrite, meeting notes and screen questions. The part on invited accounts is the tester notice.</p>
+    <p>Version 2026-11-19.1. This notice covers two things. First, the free Ownflow app for Mac, which you use without an account. Second, invited accounts, which add sign-in, cleanup, rewrite, meeting notes and screen questions. The part on invited accounts is tester notice 2026-11-19.1.</p>
 
     <nav class="toc" aria-label="On this page">
       <ol>
@@ -144,7 +144,7 @@
     <details class="fold" id="responsible" open>
       <summary>Who is responsible</summary>
       <div class="fold-body">
-        <p>The controller is Grisha, personally, until a company takes over before any paid use. Ownflow is not a company yet. The address for notices is in the <a href="legal.html">aviso legal</a>. Grisha accepted the tester notice text, version 2026-11-02.1, on 2 Nov 2026.</p>
+        <p>The controller is Grisha, personally, until a company takes over before any paid use. Ownflow is not a company yet. The address for notices is in the <a href="legal.html">aviso legal</a>. Grisha accepted the tester notice text, version 2026-11-19.1, on 20 Nov 2026.</p>
         <p>To ask for access, correction, a copy, deletion, or help, use the <a href="support.html">support page</a>. The support address will be a mailbox on ownflow.ai. This notice doesn't name it. The app doesn't send email or chat messages on its own. Don't put a recording, a transcript, a screenshot, or a password in the message. Say what broke, and the app version if you have it.</p>
       </div>
     </details>
@@ -152,7 +152,7 @@
     <details class="fold" id="accept" open>
       <summary>What you are being asked to accept</summary>
       <div class="fold-body">
-        <p>The controller accepted the tester notice text, version 2026-11-02.1, on 2 Nov 2026. You tell the other people on the call yourself. The app won't tell them.</p>
+        <p>The controller accepted the tester notice text, version 2026-11-19.1, on 20 Nov 2026. You tell the other people on the call yourself. The app won't tell them.</p>
       </div>
     </details>
 
@@ -167,9 +167,13 @@
           <li>Answer a question about a window on your screen. That uses a vision model.</li>
           <li>Count usage so the beta can stay on the current free plans.</li>
           <li>Let you ask for help without attaching the contents of a dictation or a meeting.</li>
+          <li>Read the calendars you turn on in macOS Calendar, and a Google account you connect (read-only), so the app knows your upcoming meetings. It never changes your calendar.</li>
+          <li>Notice a Zoom, Meet, Teams or Slack call and ask whether to record it. It never starts on its own.</li>
           <li>You can ask for an invite by giving an email address on the Ownflow website. A tester can also suggest someone by email, up to three people. Ownflow stores the address, whether it came from the website or a tester, and when it was asked. Ownflow does not email that person. Grisha decides who is invited. A request is deleted when Grisha invites or declines it, or after 90 days, whichever comes first. The address is not used for anything else. A tester's suggestions are included in that tester's data export and are removed when that tester's account is deleted. The website form and the suggestion control stay off until Ownflow publishes this text and turns the feature on.</li>
         </ul>
-        <p>The first tester group is expected to have every current feature, including meetings. Screen questions use Groq <code>qwen/qwen3.8-27b</code>. When you ask, the app sends a screenshot of the front window you chose, with your question. It does not send the whole display. Work calls are out. Use it for your own calls and calls with friends. You tell anyone else on the call that you are recording. The app shows you a recording indicator and lets you pause, stop and discard, or drop the other person's channel. It does not notify them.</p>
+        <p>Ownflow can read the calendars you turn on in macOS, and a Google account you connect (read-only). Every calendar starts off. Event times and attendee emails stay on your Mac. The meeting title and the names you use for speakers are saved with that meeting. It can notice a Zoom, Meet, Teams or Slack call and ask whether to record. It never starts on its own. You still tell people on the call. The app doesn't. Call detection is off until you turn it on in Settings.</p>
+        <p>The first tester group is expected to have every current feature, including meetings. Screen questions use Anthropic <code>claude-haiku-5-5</code>. When you ask, the app sends a screenshot of the front window you chose, with your question. It does not send the whole display. Work calls are out. Use it for your own calls and calls with friends. You tell anyone else on the call that you are recording. The app shows you a recording indicator and lets you pause, stop and discard, or drop the other person's channel. It does not notify them. You can let AI agents on your Mac read your meetings, for example Claude Desktop, the ChatGPT desktop app or Cursor. It is off until you turn it on and connect an agent. Agents can only read: they can't change anything or hear audio. You choose whether they see what the other people said; if you don't, they get only your words and the notes. Ownflow lists every read in the app, and you can remove an agent at any time. Ownflow's server counts each agent request, with the time and the tool name but no meeting or content, the way it counts other paid features.</p>
+        <p>From the meeting card you can ask for help with the call. A plain ask sends Groq the most recent part of your current meeting's saved transcript: at most its last 20 minutes and about 24,000 characters, never the whole call if it is longer. If you tick "Include screen", that ask goes to Anthropic instead of Groq. It sends the same transcript part and one picture of the window that was in front when you opened help (never an Ownflow window), taken when you press ask, never while you hover or browse. The picture and your question are held only for that request: Ownflow does not store or log them. Anthropic says it deletes inputs and outputs within 30 days of receipt, and keeps them up to 2 years if they are flagged under its usage policy. It processes them in the United States. Only your own meeting is read. The usage row stores token counts and the model, not the picture or the words.</p>
       </div>
     </details>
 
@@ -208,12 +212,27 @@
             <tr>
               <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Screen question</span></th>
               <td><span class="cell-label">On your Mac</span><span class="cell-value">The screenshot is the front window, kept in memory for the request. The Mac code does not write it to disk.</span></td>
-              <td><span class="cell-label">In the cloud</span><span class="cell-value">The image and the question are sent to Groq for that ask. The server holds them in memory for the request. It does not write them to disk, to Storage, or to the database, and it does not log them. A usage row stores token counts and the model id, not the image or the question.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">The image and the question are sent to Anthropic for that ask. With "Include screen" on the meeting card, the recent part of that meeting's transcript goes with them. The server holds them in memory for the request. It does not write them to disk, to Storage, or to the database, and it does not log them. A usage row stores token counts and the model id, not the image or the question.</span></td>
             </tr>
             <tr>
               <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Google sign-in</span></th>
               <td><span class="cell-label">On your Mac</span><span class="cell-value">The session is kept in the Mac keychain.</span></td>
               <td><span class="cell-label">In the cloud</span><span class="cell-value">Google receives the sign-in (openid, email, profile). The beta project stores the account.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Calendar events, from the calendars you turn on</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">Yes. For the next 12 hours: title, start and end, call link, location, and attendee names and emails, in a file in your account's folder. Event notes are read to find a call link and are not stored.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">No. When you record a meeting, its title and the names you use for speakers are saved with that meeting, as for any meeting.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Google Calendar connection</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">The Google refresh token is in the Mac keychain. The access token is only in memory.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">The Mac talks to Google directly, read-only. Nothing about it reaches the Ownflow server.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Call detection</span></th>
+              <td><span class="cell-label">On your Mac</span><span class="cell-value">Which app holds the microphone, and a browser window title, in memory only.</span></td>
+              <td><span class="cell-label">In the cloud</span><span class="cell-value">Counts only. No app names and no window titles.</span></td>
             </tr>
             <tr>
               <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Usage and diagnostic events</span></th>
@@ -243,13 +262,25 @@
         </article>
         <article class="proc">
           <h3>Groq</h3>
-          <p><span class="k">Role</span> Cleanup, rewrite, meeting notes, and screen questions. A screen question sends the screenshot and the question. The vision model is <code>qwen/qwen3.8-27b</code>. Cleanup, rewrite and notes tests use <code>openai/gpt-oss-20b</code>. That name isn't evidence that OpenAI sees the text.</p>
+          <p><span class="k">Role</span> Cleanup, rewrite, meeting notes, and help with a call from the meeting card when you leave "Include screen" off. Cleanup, rewrite and notes tests use <code>openai/gpt-oss-20b</code>. That name isn't evidence that OpenAI sees the text.</p>
           <p><span class="k">Region</span> Groq's data page says retained customer data is in Google Cloud buckets in the United States. The DPA allows processing in the US and other countries, with standard contractual clauses as the stated transfer tool.</p>
-          <p><span class="k">Training and retention</span> The services agreement, last modified 22 June 2026, says Groq may not train or fine-tune on inputs or outputs unless the customer allows it. When zero data retention is on, it stops Groq from logging inputs and outputs for reliability and abuse checks.</p>
+          <p><span class="k">Training and retention</span> The services agreement, last modified 22 June 2026, says Groq may not train or fine-tune on inputs or outputs unless the customer allows it. Zero data retention is on. It stops Groq from logging inputs and outputs for reliability and abuse checks.</p>
+        </article>
+        <article class="proc">
+          <h3>Anthropic</h3>
+          <p><span class="k">Role</span> Screen questions, and meeting-card help with "Include screen". It gets a picture of the front window, your question, and with a meeting, up to the last 20 minutes of that meeting's transcript, only when you ask with "Include screen" or ask about your screen. The model is <code>claude-haiku-5-5</code>.</p>
+          <p><span class="k">Region</span> United States.</p>
+          <p><span class="k">Training and retention</span> Held by Ownflow only for the request. Anthropic's retention is above.</p>
+        </article>
+        <article class="proc">
+          <h3>The AI agent you connect</h3>
+          <p><span class="k">Role</span> Meeting titles, notes, typed notes, your transcript lines, the other people's lines if you allowed it, and dictionary terms, when that agent asks.</p>
+          <p><span class="k">Region</span> Wherever that company processes your account's data.</p>
+          <p><span class="k">Training and retention</span> Their terms with you apply, not Ownflow's. Ownflow sends nothing until you connect an agent, and stops when you remove it.</p>
         </article>
         <article class="proc">
           <h3>Google</h3>
-          <p><span class="k">Role</span> Sign-in only, for this beta. Scopes are openid, email and profile. The Google app is in Testing, for at most 100 test users, on GCP project <code>ownflow-513418</code>.</p>
+          <p><span class="k">Role</span> Sign-in, with scopes openid, email and profile. The sign-in app, on GCP project <code>ownflow-513418</code>, has been In production since 15 Nov 2026. It no longer has a cap of 100 test users. If you connect Google Calendar, your Mac also reads it through a separate Google app with only two read-only scopes: your calendar list and your events. That reading goes from your Mac to Google, not through Ownflow's server.</p>
           <p><span class="k">Region</span> Not pinned to Frankfurt by Ownflow.</p>
           <p><span class="k">Training and retention</span> Not restated here. Google isn't the model provider.</p>
         </article>
@@ -259,7 +290,7 @@
           <p><span class="k">Region</span> Not pinned to Frankfurt by Ownflow.</p>
           <p><span class="k">Training and retention</span> GitHub receives the download requests, with your IP address. It gets no dictation, account or meeting data from Ownflow.</p>
         </article>
-        <p>The evidence, with the page addresses, is in the processor register that ships next to this file in the Ownflow source. Provider lists change. The provider pages were read on 1 Nov 2026. The 2 Nov changes are the vision model, zero data retention, the Mac backups, and account export and deletion.</p>
+        <p>The evidence, with the page addresses, is in the processor register that ships next to this file in the Ownflow source. Provider lists change. The provider pages were read on 1 Nov 2026, and Anthropic's on 16 Nov 2026. The 2 Nov changes are the vision model, zero data retention, the Mac backups, and account export and deletion.</p>
       </div>
     </details>
 
@@ -311,9 +342,24 @@
               <td><span class="cell-label">Today</span><span class="cell-value">The daily job does not delete terms.</span></td>
             </tr>
             <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Calendar events on your Mac</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">The next 12 hours.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">Refreshed every 30 seconds from macOS Calendar and every 5 minutes from Google. Past events are removed within 24 hours. Turning a calendar off deletes its events at once.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Google Calendar token</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">Until you disconnect.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">Disconnect revokes it at Google and deletes it from the keychain, with that account's events. Account deletion does the same.</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Agent access log (on your Mac)</span></th>
+              <td><span class="cell-label">Intended period</span><span class="cell-value">30 days.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">Time, agent, tool and meeting ids only; no content. Kept per account and deleted with that account's local data.</span></td>
+            </tr>
+            <tr>
               <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Screen image and question</span></th>
               <td><span class="cell-label">Intended period</span><span class="cell-value">Not kept.</span></td>
-              <td><span class="cell-label">Today</span><span class="cell-value">Sent to Groq for that ask. Not stored by Ownflow.</span></td>
+              <td><span class="cell-label">Today</span><span class="cell-value">Sent to Anthropic for that ask. Not stored by Ownflow.</span></td>
             </tr>
             <tr>
               <th scope="row"><span class="cell-label">Data</span><span class="cell-value">Invite requests and suggestions</span></th>
@@ -337,6 +383,7 @@
         <ul>
           <li>You can delete a meeting in the app. Stop-and-discard drops that recording.</li>
           <li>Full account export and full account deletion are in the app, in Settings, on the connection screen. Export downloads your account. Deletion asks you to type <code>delete</code> and to sign in with Google again. A backup can still hold the database copy for up to seven days. A restore replays deletions, as the row above says. Other Macs are not wiped from the Mac where you delete.</li>
+          <li>Your account export includes your calendar choices: which calendars, whether each is on, and the Google accounts you connected. It does not include cached events or other people's emails. Events linked to a recorded meeting will be added when that feature ships. Account deletion removes the calendar file and the Google connection from that Mac.</li>
           <li>You can still ask for help through the <a href="support.html">support page</a>. The operator can help.</li>
           <li>Other people on a call are not users of Ownflow. They ask you, the person who recorded. You can pause, stop and discard, or delete their channel.</li>
         </ul>
@@ -350,11 +397,11 @@
           <li>It doesn't authorise work calls.</li>
           <li>It doesn't make the app announce a recording.</li>
           <li>There isn't a hidden mode. The panel steps aside when the screen is captured. It isn't invisible.</li>
-          <li>It doesn't accept Supabase, Deepgram or Groq terms or DPAs on the controller's behalf.</li>
+          <li>It doesn't accept Supabase, Deepgram, Groq or Anthropic terms or DPAs on the controller's behalf.</li>
           <li>It doesn't claim the service is EU-only.</li>
           <li>It doesn't add an analytics product. Diagnostic detail is versions, error codes and timings, not contents.</li>
         </ul>
-        <p>Source version 2026-11-04.2. The controller accepted the tester notice text, version 2026-11-02.1, on 2 Nov 2026. Provider pages were read on 1 Nov 2026.</p>
+        <p>Source version 2026-11-19.1. It builds on 2026-11-04.2. It adds calendars, call detection and AI agents you connect, names Anthropic for screen questions and for meeting-card help with "Include screen", and says the Google sign-in app has been In production since 15 Nov 2026. The controller accepted the tester notice text, version 2026-11-19.1, on 20 Nov 2026. Provider pages were read on 1 Nov 2026.</p>
         <p>This isn't a company privacy policy, and it isn't legal advice.</p>
       </div>
     </details>
